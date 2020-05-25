@@ -1,0 +1,120 @@
+<html>
+    <head>
+        <!-- font/definition-->
+        <style>
+            h2, h3, article {
+                font-family: 'Times New Roman', Times, serif;
+                margin-left: 5px;
+                margin-right: 5px;
+                font-size: 100%;
+                text-align: center;
+                background-color: grey;
+                padding-bottom: 5px;
+                padding-top: 5px;
+            }
+            p, ol, ul, li {
+                font-family: 'Times New Roman', Times, serif;
+                margin-left: 5px;
+                margin-right: 5px;
+                font-size: 100%;
+                text-align: left;
+                background-color: grey;
+            }
+            sub {
+                font-family: 'Times New Roman', Times, serif;
+                margin-left: 5px;
+                margin-right: 5px;
+                font-size: 100%;
+                text-align: left;
+            }
+            .navbar {
+                overflow: hidden;
+                background-color: #333;
+            }
+            .navbar a {
+                float: left;
+                font-size: 16px;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+            .dropdown {
+                float: left;
+                overflow: hidden;
+            }
+            .dropdown .dropbtn {
+                font-size: 16px;  
+                border: none;
+                outline: none;
+                color: white;
+                padding: 14px 16px;
+                background-color: inherit;
+                font-family: inherit;
+                margin: 0;
+            }
+            .navbar a:hover, .dropdown:hover .dropbtn {
+                background-color: grey;
+            }
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+            }
+            .dropdown-content a {
+                float: none;
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+            }
+            .dropdown-content a:hover {
+                background-color: #ddd;
+            }
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+        </style>
+        <!-- end font/definition-->
+    </head>
+    <body>
+    <!-- topbar-->
+        <div class="navbar">
+            <a href = "/index">Home</a>
+            <a href = "/index">Another Page</a>
+            <div class = "dropdown">
+              <button class = "dropbtn">Internal Directory 
+                <i class = "dropper"></i>
+              </button>
+              <div class = "dropdown-content">
+                <a href = "pages/online-presences">Contact Information</a>
+                <a href = "pages/privacy">Privacy Policies</a>
+                <a href = "pages/what-the-fuck">Something?</a>
+              </div>
+            </div> 
+          </div>
+        <!--end topbar-->
+    </body>
+</html>
+
+<h2>Uh oh!</h2>
+
+It appears you have encountered a nonexistant page. Click <a href = "https://syntheticordinance.github.io/">here</a> or use the internal directory to navigate back to the home page or wherever you wish to go. Since we're sad that you're seeing this, have some condolence cats.
+
+<img src = "/media/cats.jpg" alt = "condolence cats">
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167546856-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-167546856-1');
+</script>
+<!-- End global site tag (gtag.js) - Google Analytics -->
