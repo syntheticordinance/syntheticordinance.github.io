@@ -1,8 +1,8 @@
 <!-- hi there, html reader, say hi if you see this -->
 <!DOCTYPE html>
 
-<link rel="shortcut icon" href="/media/icon.jpg"/>
-<title>About Me</title>
+<link rel = "shortcut icon" href = "/media/icon.jpg"/>
+<title>Online Presences</title>
 
 <html>
     <head>
@@ -17,20 +17,20 @@
         <!-- End fonts/definitions -->
     </head>
     <body>
-        <!-- Information: About me -->
+        <!-- Information -->
         <h1>
-            About Me
+            My Online Presences
         </h1>
         <section class  = "page-section">
             <blockquote>
                 <p>
-                    Hi. My name is Stephen, and this is my portfolio. I'm a fifteen-year-old developer teaching myself from code snippets I find or other OpenSource projects.<br>
-                    Currently you'll find me looking around on GitHub or messing about with HTML or JavaScript.<br>
-                    When I finish a project, it'll be here. Cheers!
+                    Discord: synthetic#3020<br>
+                    [GitHub](https://github.com/syntheticordinance)<br>
+                    [Twitter](https://twitter.com/synordinary)
                 </p>
             </blockquote>
         </section>
-        <!-- End information: About Me-->
+        <!-- End information -->
     </body>
 </html>
 

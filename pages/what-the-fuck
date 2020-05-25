@@ -1,0 +1,76 @@
+<!-- hi there, html reader, say hi if you see this -->
+<!DOCTYPE html>
+<html>
+        </div>
+        <h2 class="h-c-headline h-c-headline h-c-headline--two">
+        The world searches on Google. Turn those searches into customers.
+        </h2>
+        <div class="optimization-module__description">
+        <p>
+            Every month, there are over...
+        </p>
+        </div>
+    </div>
+    </div>
+    <div class="repeatable-tiles h-c-grid__col h-c-grid__col-l--8 h-c-grid__col-l--offset-2">
+    <div class="tile">
+        <div class="tile_icon-container tile-1" data-animation-add-class="" data-animation-add-class-classname="item-visible" data-animation-scroll-trigger="0.75">
+        <svg aria-hidden="true" role="img" class="tile-icon">
+        <use xlink:href="#icon_search_restaurants"></use></svg>
+        </div>
+        <p class="tile_headline">
+        5 billion
+        </p>
+        <p class="tile_description h-c-copy h-c-copy--one">
+        searches on Google for restaurants
+        </p>
+    </div>
+    <div class="tile">
+        <div class="tile_icon-container tile-2" data-animation-add-class="" data-animation-add-class-classname="item-visible" data-animation-scroll-trigger="0.75">
+        <svg aria-hidden="true" role="img" class="tile-icon">
+        <use xlink:href="#icon_search_hotels"></use></svg>
+        </div>
+        <p class="tile_headline">
+        3&nbsp;billion
+        </p>
+        <p class="tile_description h-c-copy h-c-copy--one">
+        searches for hotels
+        </p>
+    </div>
+    <div class="tile">
+        <div class="tile_icon-container tile-3" data-animation-add-class="" data-animation-add-class-classname="item-visible" data-animation-scroll-trigger="0.75">
+        <svg aria-hidden="true" role="img" class="tile-icon">
+        <use xlink:href="#icon_search_clothing"></use></svg>
+        </div>
+        <p class="tile_headline">
+        1&nbsp;billion
+        </p>
+        <p class="tile_description h-c-copy h-c-copy--one">
+        searches for clothing stores
+        </p>
+    </div>
+    <div class="tile">
+        <div class="tile_icon-container tile-4" data-animation-add-class="" data-animation-add-class-classname="item-visible" data-animation-scroll-trigger="0.75">
+        <svg aria-hidden="true" role="img" class="tile-icon">
+        <use xlink:href="#icon_search_beauty"></use></svg>
+        </div>
+        <p class="tile_headline">
+        600 million
+        </p>
+        <p class="tile_description h-c-copy h-c-copy--one">
+        searches for hair and beauty salons
+        </p>
+    </div>
+    <div class="tile">
+        <div class="tile_icon-container tile-5" data-animation-add-class="" data-animation-add-class-classname="item-visible" data-animation-scroll-trigger="0.75">
+        <svg aria-hidden="true" role="img" class="tile-icon">
+        <use xlink:href="#icon_search_coffee"></use></svg>
+        </div>
+        <p class="tile_headline">
+        5 million
+        </p>
+        <p class="tile_description h-c-copy h-c-copy--one">
+        searches for coffee shops
+        </p>
+    </div>
+</html>
