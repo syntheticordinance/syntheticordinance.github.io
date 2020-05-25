@@ -1,4 +1,4 @@
-# syntheticordinance.github.io
+## *Portfolio: Stephen H. (Synthetic)*
 
 Repository containing personal portfolio.<br/>
 [Github Source](https://pages.github.com/?)<br/>
@@ -10,4 +10,4 @@ Repository containing personal portfolio.<br/>
         text here
     </p>
     ```
-- Site uses Google Analytics, ID: `UA-167546856-1`
+- The website uses Google Analytics, ID: `UA-167546856-1`
