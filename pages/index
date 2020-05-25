@@ -18,7 +18,9 @@
     </head>
     <body>
         <!-- Information: About me -->
-        <h2>About Me</h2>
+        <h1>
+            About Me
+        </h1>
         <section class  = "page-section">
             <blockquote>
                 <p>
