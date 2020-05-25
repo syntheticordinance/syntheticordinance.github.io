@@ -1,7 +1,7 @@
-var person = prompt("Please enter your name", "Harry Potter");
+var pw = prompt("Please enter authorisation code.", "Harry Potter");
 
-if (person == null || person == "") {
-  txt = "User cancelled the prompt.";
+if (pw == null || pw == "Harry Potter") {
+  txt = "Contact: 65305642+syntheticordinance@users.noreply.github.com";
 } else {
-  txt = "We're sorry to hear about that. Please contact us at syntheticordinance@users.noreply.github.com";
+  txt = "Error.";
 }
