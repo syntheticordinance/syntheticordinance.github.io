@@ -1,0 +1,115 @@
+<!-- hi there, html reader, say hi if you see this -->
+<!DOCTYPE html>
+
+<html lang = "en-GB">
+<link rel = "shortcut icon" href = "/pages/assets/icon.jpg"/>
+<title>Parallax</title>
+
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            body, html {
+                height: 100%;
+                margin: 0;
+                font: 400 15px/1.8 "Times New Roman", serif;
+                color: #777;
+            }
+            .first-last-img, .second-img, .third-img {
+                position: relative;
+                opacity: 0.65;
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .first-last-img {
+                background-image: url("assets/background.jpg");
+                min-height: 100%;
+            }
+            .second-img {
+                background-image: url("assets/icon.jpg");
+                min-height: 400px;
+            }
+            .third-img {
+                background-image: url("assets/road.jpg");
+                min-height: 400px;
+            }
+            .caption {
+                position: absolute;
+                left: 0;
+                top: 50%;
+                width: 100%;
+                text-align: center;
+                color: #000;
+            }
+            .caption span.border {
+                background-color: #111;
+                color: #fff;
+                padding: 18px;
+                font-size: 25px;
+                letter-spacing: 1px;
+            }
+            h3 {
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                font: 20px "Lato", sans-serif;
+                color: #111;
+            }
+            @media only screen and (max-device-width: 1024px) {
+                .first-last-img, .second-img, .third-img {
+                    background-attachment: scroll;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="first-last-img">
+            <div class="caption">
+                <span class="border">You wake up. A man in a suit stares at you from across the room.</span>
+            </div>
+        </div>
+        <div style="color: #777; background-color: white; text-align: center; padding: 50px 80px; text-align: justify;">
+            <h3 style="text-align:center;">You look afraid.</h3>
+            <p>Don't be afraid. This is a dream! The last dream you may ever have, for nightmares are coming.</p>
+        </div>
+        <div class="second-img">
+            <div class="caption">
+                <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">It begins to fade.</span>
+            </div>
+        </div>
+        <div style="position:relative;">
+            <div style="color:#ddd;background-color:rgb(50,50,100);text-align:center;padding:50px 80px;text-align: justify;">
+                <h3 style="text-align:center;">The shattering of the new christ has now begun.</h3>
+                <p>Tick, tock goes the clock. Time is running out.</p>
+            </div>
+        </div>
+        <div class="third-img">
+            <div class="caption">
+                <span class="border" style="background-color:transparent;font-size:25px;color: black;">You wake up with a jolt.</span>
+            </div>
+        </div>
+        <div style="position:relative;">
+            <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+                <p>Why is there a road? Was it always here? Who am I? Where am I? What is this uniform, you ask yourself, finding that you simply do not know. Behind you is wreckage, of what obviously was your past life. Now, you see a long road ahead, and you begin to walk, not knowing why, but having that <i>feeling</i> that you should.</p>
+            </div>
+        </div>
+        <div class="first-last-img">
+            <div class="caption">
+                <span class = "border">And then it all comes back. Day has broken.</span>
+            </div>
+        </div>
+    </body>
+</html>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-167546856-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-167546856-1');
+</script>
+<!-- End global site tag (gtag.js) - Google Analytics -->
