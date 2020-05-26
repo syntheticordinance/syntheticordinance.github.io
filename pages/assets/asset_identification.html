@@ -1,0 +1,3936 @@
+<!-- hi there, html reader, say hi if you see this -->
+<!DOCTYPE html>
+
+<html>
+    <style>
+    html.overlay-open .navbar-fixed-top{
+        z-index:400;
+        }
+    html.js fieldset.collapsed{
+        height:auto;
+        }
+    html.js input.form-autocomplete{
+        background-image:none;
+        }
+    body{
+        position:relative;
+        }
+    body.admin-expanded.admin-vertical.admin-nw .navbar,body.admin-expanded.admin-vertical.admin-sw .navbar {
+        margin-left:260px;
+        }
+    body.navbar-is-fixed-top{
+        padding-top:64px !important;
+        }
+    body.navbar-is-fixed-bottom{
+        padding-bottom:64px !important;
+        }
+    body.toolbar {
+        padding-top:30px !important;
+        }
+    body.toolbar .navbar-fixed-top{
+        top:30px;
+        }
+    body.toolbar.navbar-is-fixed-top{
+        padding-top:94px !important;
+        }
+    body.toolbar-drawer {
+        padding-top:64px !important;
+        }
+    body.toolbar-drawer .navbar-fixed-top{
+        top:64px;
+        }
+    body.toolbar-drawer.navbar-is-fixed-top{
+        padding-top:128px !important;
+        }
+    body.admin-menu .navbar-fixed-top{
+        top:29px;
+        }
+    body.admin-menu.navbar-is-fixed-top{
+        padding-top:93px !important;
+        }
+    body div#admin-toolbar {
+        z-index:1600;
+        }
+    body #toolbar,body #admin-menu,body #admin-toolbar {
+        -webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;
+        }
+    body #admin-menu{
+        margin:0;padding:0;position:fixed;z-index:1600;
+        }
+    body #admin-menu .dropdown li{
+        line-height:normal;
+        }
+    .navbar.container {
+        margin-top:20px;
+        }
+    @media screen and (max-width:767px){
+        .navbar.container {
+        max-width:720px;
+        }
+    }
+    @media screen and (min-width:767px){
+        .navbar.container {
+        max-width:940px;
+        }
+    }
+    @media screen and (min-width:1200px){
+        .navbar.container {
+        max-width:1140px;
+        }
+    }
+    .navbar.container > .container {
+        margin:0;padding:0;width:auto;
+        }
+    #overlay-container,.overlay-modal-background,.overlay-element{
+        z-index:1500;
+        }
+    #toolbar {
+        z-index:1600;
+        }
+    .modal{
+        z-index:1620;
+        }
+    .modal-dialog{
+        z-index:1630;
+        }
+    .modal-backdrop{
+        z-index:1610;
+        }
+    .element-invisible{
+        margin:0;padding:0;width:1px;
+        }
+    .navbar .logo{
+        margin-right:-15px;padding-left:15px;padding-right:15px;
+        }
+    @media screen and (max-width:767px){
+        .navbar .logo{
+        margin-right:0;padding-left:0;
+        }
+    }
+    ul.secondary{
+        float:left;
+        }
+    @media screen and (max-width:767px){
+        ul.secondary{
+        float:right;
+        }
+    }
+    .page-header {
+        margin-top:0;
+        }
+    .block:first-child h2.block-title{
+        margin-top:0;
+        }
+    p:last-child{
+        margin-bottom:0;
+        }
+    .region-help > .glyphicon{
+        font-size:18px;float:left;margin:-0.05em 0.5em 0 0;
+        }
+    .region-help .block{
+        overflow:hidden;
+        }
+    form#search-block-form{
+        margin:0;
+        }
+    .navbar #block-search-form{
+        float:none;margin:5px 0 5px 5px;
+        }
+    @media screen and (min-width:767px){
+        .navbar #block-search-form{
+        float:right;
+        }
+    }
+    .navbar-search .control-group{
+        margin-bottom:0;
+        }
+    ul.action-links{
+        margin:12px 0;padding:0;
+        }
+    ul.action-links li{
+        display:inline;margin:0;padding:0 6px 0 0;
+        }
+    ul.action-links .glyphicon{
+        padding-right:0.5em;
+        }
+    input,textarea,select,.uneditable-input{
+        max-width:100%;width:auto;
+        }
+    input.error {
+        color:#b94a48;border-color:#ebccd1;
+        }
+    .webform-component--e-mail-address label.error {
+        color:red;font-size:11px;text-transform:none !important;
+        }
+    fieldset legend.panel-heading{
+        float:left;line-height:1em;margin:0;
+        }
+    fieldset .panel-body{
+        clear:both;
+        }
+    fieldset .panel-heading a.panel-title{
+        color:inherit;display:block;margin:-10px -15px;padding:10px 15px;
+        }
+    fieldset .panel-heading a.panel-title:hover {
+        text-decoration:none;
+        }
+    .form-actions{
+        clear:both;
+        }
+    .resizable-textarea textarea{
+        border-radius:4px 4px 0 0;
+        }
+    .radio:first-child,.checkbox:first-child{
+        margin-top:0;
+        }
+    .radio:last-child,.checkbox:last-child{
+        margin-bottom:0;
+        }
+    .help-block,.control-group .help-inline{
+        color:#999999;font-size:12px;margin:5px 0 10px;padding:0;
+        }
+    .panel-heading{
+        display:block;
+        }
+    a.tabledrag-handle .handle{
+        height:auto;width:auto;
+        }
+    .error {
+        color:#b94a48;
+        }
+    div.error,table tr.error {
+        background-color:#f2dede;color:#b94a48;
+        }
+    .control-group.error {
+        background:none;
+        }
+    .control-group.error label,.control-group.error .control-label{
+        color:#b94a48;font-weight:600;
+        }
+    .control-group.error input,.control-group.error textarea,.control-group.error select,.control-group.error .uneditable-input{
+        color:#555555;border:1px solid #cccccc;
+        }
+    .control-group.error .help-block,.control-group.error .help-inline{
+        color:#333333;
+        }
+    .list-inline > li.first{
+        padding-left:0;
+        }
+    .nav-tabs{
+        margin-bottom:10px;
+        }
+    ul li.collapsed,ul li.expanded,ul li.leaf{
+        list-style:none;list-style-image:none;
+        }
+    .tabs--secondary{
+        margin:0 0 10px;
+        }
+    .submitted{
+        margin-bottom:1em;font-style:italic;font-weight:normal;color:#777;
+        }
+    .password-strength{
+        width:17em;float:right;margin-top:1.4em;
+        }
+    .password-strength-title{
+        display:inline;
+        }
+    .password-strength-text{
+        float:right;font-weight:bold;
+        }
+    .password-indicator {
+        background-color:#949494;height:0.3em;width:100%;
+        }
+    .password-indicator div{
+        height:100%;width:0%;background-color:#999999;
+        }
+    input.password-confirm,input.password-field{
+        width:16em;margin-bottom:0.4em;
+        }
+    div.password-confirm{
+        float:right;margin-top:1.5em;visibility:hidden;width:17em;
+        }
+    div.form-item div.password-suggestions{
+        padding:0.2em 0.5em;margin:0.7em 0;width:38.5em;border:1px solid #B4B4B4;
+        }
+    div.password-suggestions ul{
+        margin-bottom:0;
+        }
+    .confirm-parent,.password-parent{
+        clear:left;margin:0;width:36.3em;
+        }
+    .progress-wrapper .progress{
+        margin-bottom:10px;
+        }
+    .pagination ul > li > a.progress-disabled{
+        float:left;
+        }
+    .form-autocomplete .glyphicon{
+        color:#999999;font-size:120%;
+        }
+    .form-autocomplete .glyphicon.glyphicon-spin{
+        color:#428bca;
+        }
+    .form-autocomplete .input-group-addon{
+        background-color:#ffffff;
+        }
+    .ajax-progress .glyphicon{
+        font-size:90%;margin:0 -0.25em 0 0.5em;
+        }
+    .glyphicon-spin{
+        display:inline-block;-moz-animation:spin 1s infinite linear;-o-animation:spin 1s infinite linear;-webkit-animation:spin 1s infinite linear;animation:spin 1s infinite linear;
+        }
+    a .glyphicon-spin{
+        display:inline-block;text-decoration:none;
+        }
+    @-moz-keyframes spin{
+        0%{
+        -moz-transform:rotate(0deg);
+        }
+    100%{
+        -moz-transform:rotate(359deg);
+        }
+    }
+    @-webkit-keyframes spin{
+        0%{
+        -webkit-transform:rotate(0deg);
+        }
+    100%{
+        -webkit-transform:rotate(359deg);
+        }
+    }
+    @-o-keyframes spin{
+        0%{
+        -o-transform:rotate(0deg);
+        }
+    100%{
+        -o-transform:rotate(359deg);
+        }
+    }
+    @-ms-keyframes spin{
+        0%{
+        -ms-transform:rotate(0deg);
+        }
+    100%{
+        -ms-transform:rotate(359deg);
+        }
+    }
+    @keyframes spin{
+        0%{
+        transform:rotate(0deg);
+        }
+    100%{
+        transform:rotate(359deg);
+        }
+    }
+    .glyphicon-refresh{
+        -webkit-transform-origin:50% 45%;-moz-transform-origin:50% 45%;-ms-transform-origin:50% 45%;-o-transform-origin:50% 45%;transform-origin:50% 45%;
+        }
+    .tabbable{
+        margin-bottom:20px;
+        }
+    .tabs-below > .nav-tabs,.tabs-left > .nav-tabs,.tabs-right > .nav-tabs{
+        border-bottom:0;
+        }
+    .tabs-below > .nav-tabs .summary,.tabs-left > .nav-tabs .summary,.tabs-right > .nav-tabs .summary{
+        color:#999999;font-size:12px;
+        }
+    .tab-pane > .panel-heading{
+        display:none;
+        }
+    .tab-content > .active{
+        display:block;
+        }
+    .tabs-below > .nav-tabs{
+        border-top:1px solid #dddddd;
+        }
+    .tabs-below > .nav-tabs > li{
+        margin-top:-1px;margin-bottom:0;
+        }
+    .tabs-below > .nav-tabs > li > a{
+        border-radius:0 0 4px 4px;
+        }
+    .tabs-below > .nav-tabs > li > a:hover,.tabs-below > .nav-tabs > li > a:focus{
+        border-top-color:#dddddd;border-bottom-color:transparent;
+        }
+    .tabs-below > .nav-tabs > .active > a,.tabs-below > .nav-tabs > .active > a:hover,.tabs-below > .nav-tabs > .active > a:focus{
+        border-color:transparent #dddddd #dddddd #dddddd;
+        }
+    .tabs-left > .nav-tabs,.tabs-right > .nav-tabs{
+        padding-bottom:20px;width:220px;
+        }
+    .tabs-left > .nav-tabs > li,.tabs-right > .nav-tabs > li{
+        float:none;
+        }
+    .tabs-left > .nav-tabs > li:focus,.tabs-right > .nav-tabs > li:focus{
+        outline:0;
+        }
+    .tabs-left > .nav-tabs > li > a,.tabs-right > .nav-tabs > li > a{
+        margin-right:0;margin-bottom:3px;
+        }
+    .tabs-left > .nav-tabs > li > a:focus,.tabs-right > .nav-tabs > li > a:focus{
+        outline:0;
+        }
+    .tabs-left > .tab-content,.tabs-right > .tab-content{
+        border-radius:0 4px 4px 4px;-webkit-box-shadow:0 1px 1px rgba(0,0,0,0.05);-moz-box-shadow:0 1px 1px rgba(0,0,0,0.05);box-shadow:0 1px 1px rgba(0,0,0,0.05);border:1px solid #dddddd;overflow:hidden;padding:10px 15px;
+        }
+    .tabs-left > .nav-tabs{
+        float:left;margin-right:-1px;
+        }
+    .tabs-left > .nav-tabs > li > a{
+        border-radius:4px 0 0 4px;
+        }
+    .tabs-left > .nav-tabs > li > a:hover,.tabs-left > .nav-tabs > li > a:focus{
+        border-color:#eeeeee #dddddd #eeeeee #eeeeee;
+        }
+    .tabs-left > .nav-tabs > .active > a,.tabs-left > .nav-tabs > .active > a:hover,.tabs-left > .nav-tabs > .active > a:focus{
+        border-color:#dddddd transparent #dddddd #dddddd;-webkit-box-shadow:-1px 1px 1px rgba(0,0,0,0.05);-moz-box-shadow:-1px 1px 1px rgba(0,0,0,0.05);box-shadow:-1px 1px 1px rgba(0,0,0,0.05);
+        }
+    .tabs-right > .nav-tabs{
+        float:right;margin-left:-1px;
+        }
+    .tabs-right > .nav-tabs > li > a{
+        border-radius:0 4px 4px 0;
+        }
+    .tabs-right > .nav-tabs > li > a:hover,.tabs-right > .nav-tabs > li > a:focus{
+        border-color:#eeeeee #eeeeee #eeeeee #dddddd;-webkit-box-shadow:1px 1px 1px rgba(0,0,0,0.05);-moz-box-shadow:1px 1px 1px rgba(0,0,0,0.05);box-shadow:1px 1px 1px rgba(0,0,0,0.05);
+        }
+    .tabs-right > .nav-tabs > .active > a,.tabs-right > .nav-tabs > .active > a:hover,.tabs-right > .nav-tabs > .active > a:focus{
+        border-color:#dddddd #dddddd #dddddd transparent;
+        }
+    th.checkbox,td.checkbox,th.radio,td.radio{
+        display:table-cell;
+        }
+    .views-display-settings .label{
+        font-size:100%;color:#666666;
+        }
+    .views-display-settings .footer {
+        padding:0;margin:4px 0 0 0;
+        }
+    table .radio input[type="radio"],table .checkbox input[type="checkbox"]{
+        max-width:inherit;
+        }
+    .form-horizontal .form-group label{
+        position:relative;min-height:1px;margin-top:0;margin-bottom:0;padding-top:7px;padding-left:15px;padding-right:15px;text-align:right;
+        }
+    @media (min-width:767px){
+        .form-horizontal .form-group label{
+        float:left;width:16.66666667%;
+        }
+    }
+    .alert a{
+        font-weight:bold;
+        }
+    .alert-success a{
+        color:#356635;
+        }
+    .alert-info a{
+        color:#2d6987;
+        }
+    .alert-warning a{
+        color:#a47e3c;
+        }
+    .alert-danger a{
+        color:#953b39;
+        }
+    @font-face{
+        font-family:'dinbold';src:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/fonts/dinbold-webfont.eot);src:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/fonts/dinbold-webfont.eot?#iefix) format('eeot'),url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/fonts/dinbold-webfont.woff2) format('woff2'),url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/fonts/dinbold-webfont.woff) format('woff'),url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/fonts/dinbold-webfont.ttf) format('truetype'),url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/fonts/dinbold-webfont.svg#dinregular) format('svg');font-weight:700;font-style:700;
+        }
+    @font-face{
+        font-family:'dinlight';src:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/fonts/dinlight-webfont.eot);src:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/fonts/dinlight-webfont.eot?#iefix) format('eot'),url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/fonts/dinlight-webfont.woff2) format('woff2'),url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/fonts/dinlight-webfont.woff) format('woff'),url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/fonts/dinlight-webfont.ttf) format('truetype'),url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/fonts/dinlight-webfont.svg#dinlight) format('svg');font-weight:normal;font-style:normal;
+        }
+    @font-face{
+        font-family:'dinmedium';src:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/fonts/dinmedium-webfont.eot);src:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/fonts/dinmedium-webfont.eot?#iefix) format('eot'),url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/fonts/dinmedium-webfont.woff2) format('woff2'),url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/fonts/dinmedium-webfont.woff) format('woff'),url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/fonts/dinmedium-webfont.ttf) format('truetype'),url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/fonts/dinmedium-webfont.svg#dinmedium) format('svg');font-weight:normal;font-style:normal;
+        }
+    @font-face{
+        font-family:'dinregular';src:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/fonts/dinregular-webfont.eot);src:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/fonts/dinregular-webfont.eot?#iefix) format('eot'),url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/fonts/dinregular-webfont.woff2) format('woff2'),url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/fonts/dinregular-webfont.woff) format('woff'),url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/fonts/dinregular-webfont.ttf) format('truetype'),url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/fonts/dinregular-webfont.svg#dinregular) format('svg');font-weight:normal;font-style:normal;
+        }
+    .button-blue-darker {
+        background-color:#002955;color:#ffffff;position:relative;text-decoration:none;width:100%;padding:5px;cursor:pointer;font-family:'dinlight';display:inherit;
+        }
+    .button-blue-darker:hover,.button-blue-darker:focus{
+        color:#ffffff;text-decoration:none;cursor:pointer;
+        }
+    .button-blue-darker:after {
+        background-color:#3a6592;content:"";background-image:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/arrow-button-blue.png);background-position:0;background-repeat:no-repeat;right:-20px;top:0;position:absolute;text-align:center;display:block;width:20px;height:100%;
+        }
+    .button-white-darker {
+        background-color:#ffffff;color:#000000;position:relative;text-decoration:none;cursor:pointer;width:100%;padding:10px 10px 10px 30px;-webkit-box-shadow:5px 5px 0px -2px rgba(204,204,204,0.93);-moz-box-shadow:5px 5px 0px -2px rgba(204,204,204,0.93);box-shadow:5px 5px 0px -2px rgba(204,204,204,0.93);
+        }
+    .button-white-darker:hover {
+        color:#000000;text-decoration:none;cursor:pointer;
+        }
+    .button-white-darker:before{
+        content:"";left:0;top:0;position:absolute;text-align:center;display:block;width:17px;height:90%;border-top-style:inset;border-top-width:1px;border-top-color:white;border-left-color:white;border-left-width:1px;border-left-style:inset;margin:1px;z-index:1;
+        }
+    .button-white-darker:after {
+        background-color:#3a6592;background-position:center;background-repeat:no-repeat;background-image:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/arrow-button-white.png);content:"";left:0;top:0;position:absolute;text-align:center;display:block;width:20px;height:100%;
+        }
+    .button-white-darker:hover:after {
+        background:#1b3869;
+        }
+    .telephone-background-products{
+        background-image:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/produtcts-telephone.png);background-repeat:no-repeat;padding:0 40px 10px 78px;width:366px;color:#ffffff;font-size:26px;
+        }
+    .telephone-background-products.no-tel{
+        background-image:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/produtcts-no-telephone.png);min-height:75px;
+        }
+    .telephone-background-products.no-tel .tel-content{
+        display:none;
+        }
+    .links-blue{
+        color:#3a6592;text-decoration:underline;
+        }
+    .links-blue:hover {
+        color:#3a6592;
+        }
+    .links-dark{
+        color:#000;text-decoration:underline;
+        }
+    .links-dark:hover {
+        color:#000;
+        }
+    ol.no-circle{
+        list-style:none;margin-top:22px;padding:0;
+        }
+    ol.no-circle li{
+        counter-increment:foo;position:relative;margin-left:40px;
+        }
+    ol.no-circle li:before{
+        content:counter(foo) ".";counter-increment:item;font-weight:bold;text-align:left;width:40px;display:block;position:absolute;left:-40px;
+        }
+    h1.page-header {
+        color:#405d7e;margin:0;font-family:'dinregular';padding-bottom:5px;letter-spacing:-2px;border-bottom:0;
+        }
+    @media screen and (max-width:767px){
+        h1.page-header {
+        font-size:22px;
+        }
+    }
+    @media (min-width:992px){
+        h1.page-header {
+        font-size:30px;
+        }
+    }
+    h2.sub-title{
+        font-size:20px;color:#405d7e;margin-top:10px;margin-bottom:15px;
+        }
+    @media screen and (max-width:767px){
+        h2.sub-title{
+        font-size:19px;
+        }
+    }
+    h2.sub-title-description{
+        color:#405d7e;font-family:'dinmedium';letter-spacing:-1px;font-size:20px;
+        }
+    h3.title-description{
+        font-size:14px;margin:17px 0 17px;color:#002955;
+        }
+    hr {
+        border-top:1px solid #cccccc;
+        }
+    .table .row-darker-blue{
+        background-image:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/bg-table-dark-blue.png);
+        }
+    .table .row-dark-blue{
+        background-image:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/bg-table-light-blue.png);
+        }
+    .table > thead > tr > th{
+        border:0;
+        }
+    .table tbody tr td:nth-child(1){
+        color:#ffffff;
+        }
+    .table tbody tr td{
+        border-bottom:0;border-top:1px solid #acbdd0;
+        }
+    .table tbody tr:first-child td{
+        border:0;
+        }
+    .table tbody tr td:not(:nth-child(1)){
+        display:block;
+        }
+    .ie9 .table tbody tr td:first-child + td,.ie9 .table tbody tr td:first-child + td + td,.ie9 .table tbody tr td:first-child + td + td + td,.ie9 .table tbody tr td:first-child + td + td + td + td,.ie9 .table tbody tr td:first-child + td + td + td + td + td{
+        float:left;width:100%;
+        }
+    @media screen and (max-width:767px){
+        .node-type-simple-page .content-full .container:first-child,.node-type-webform .content-full .container:first-child{
+        padding-right:30px;padding-left:30px;
+        }
+    .node-type-simple-page .content-full .container:first-child .row:first-child,.node-type-webform .content-full .container:first-child .row:first-child{
+        margin-right:-20px;margin-left:-20px;
+        }
+    .node-type-simple-page .content-full .container:first-child .col-sm-12:first-child,.node-type-webform .content-full .container:first-child .col-sm-12:first-child{
+        padding-right:20px;padding-left:20px;
+        }
+    }
+    .phone-number {
+        color:inherit;white-space:nowrap;
+        }
+    .isi .isi-content .phone-number,.isi .isi-content .phone-number:link,.isi .isi-content .phone-number:hover,.isi .isi-content .phone-number:focus{
+        color:inherit;text-decoration:none;
+        }
+    @media screen and (max-width:767px){
+        .phone-number,.phone-number:hover {
+        text-decoration:none;
+        }
+    }
+    .phone-number:focus,.phone-number:hover {
+        color:inherit;
+        }
+    @media screen and (min-width:767px){
+        .phone-number:focus,.phone-number:hover {
+        text-decoration:none;cursor:text;
+        }
+    }
+    .node-type-productsall .for-medical .phone-number {
+        text-decoration:none !important;
+        }
+    hgroup{
+        border-bottom:1px solid #405d7e;
+        }
+    @media screen and (min-width:767px){
+        hgroup h1.page-header,hgroup h2.page-subtitle{
+        display:inline;
+        }
+    }
+    hgroup h2.page-subtitle{
+        font-size:26px;
+        }
+    @media screen and (min-width:767px){
+        body.front .content-full .container .illustration_03 .smallscreen{
+        top:170px !important;
+        }
+    .separator2 a.phone-number {
+        font-size:19px !important;
+        }
+    }
+    @media (max-width:768px){
+        body.front .content-full .container .illustration_03 .smallscreen{
+        top:48px !important;
+        }
+    }
+    body .alert{
+        padding:0;margin-bottom:0;border:0;
+        }
+    body .alert a{
+        display:none;
+        }
+    body .alert-success{
+        color:transparent;background-color:transparent;border-color:transparent;
+        }
+    body .alert-danger {
+        display:none !important;
+        }
+    @media (max-width:768px){
+        body.front nav.navbar {
+        position:absolute;
+        }
+    }
+    body.front .content-full .container {
+        width:100%;padding:0 !important;margin:0;overflow:hidden;
+        }
+    body.front .content-full .container .parallax h1{
+        display:none;
+        }
+    body.front .content-full .container .parallax .content.right,body.front .content-full .container .parallax .content.left{
+        height:70vh;position:relative;
+        }
+    @media screen and (max-width:767px){
+        body.front .content-full .container .parallax .content.right,body.front .content-full .container .parallax .content.left{
+        height:461px !important;
+        }
+    }
+    @media (max-width:768px){
+        body.front .content-full .container .parallax .content.right,body.front .content-full .container .parallax .content.left{
+        height:461px !important;
+        }
+    }
+    @media (min-width:769px){
+        body.front .content-full .container .parallax .content.right,body.front .content-full .container .parallax .content.left{
+        height:89vh;
+        }
+    }
+    body.front .content-full .container .parallax .content.right .bg-triangle,body.front .content-full .container .parallax .content.left .bg-triangle{
+        position:absolute;margin-top:43px;border-left:0px solid transparent;border-right:28px solid transparent;border-top:82px solid rgba(255,255,255,0.5);width:96%;-webkit-filter:drop-shadow(0px 0px 2px #cccccc);filter:drop-shadow(0 0px 2px #acc5e4);
+        }
+    @media (min-width:769px){
+        body.front .content-full .container .parallax .content.right .bg-triangle,body.front .content-full .container .parallax .content.left .bg-triangle{
+        margin-top:70px;border-left:0px solid transparent;border-right:82px solid transparent;border-top:90px solid rgba(255,255,255,0.5);width:49%;
+        }
+    }
+    body.front .content-full .container .parallax .content.right .smallscreen,body.front .content-full .container .parallax .content.left .smallscreen{
+        position:absolute;margin:0 auto;left:16px;right:0;top:50px;float:left;
+        }
+    @media (min-width:769px){
+        body.front .content-full .container .parallax .content.right .smallscreen,body.front .content-full .container .parallax .content.left .smallscreen{
+        width:940px;left:0;top:80px;
+        }
+    }
+    body.front .content-full .container .parallax .content.right .smallscreen h2,body.front .content-full .container .parallax .content.left .smallscreen h2{
+        margin:0;font-size:18px;font-family:'dinmedium';color:#002955;text-transform:uppercase;
+        }
+    @media (min-width:769px){
+        body.front .content-full .container .parallax .content.right .smallscreen h2,body.front .content-full .container .parallax .content.left .smallscreen h2{
+        font-size:30px;
+        }
+    }
+    body.front .content-full .container .parallax .content.right .smallscreen h4,body.front .content-full .container .parallax .content.left .smallscreen h4{
+        margin:0;color:#002955;font-size:12px;padding-top:2px;line-height:13px;width:286px;letter-spacing:-0.2px;
+        }
+    @media (min-width:769px){
+        body.front .content-full .container .parallax .content.right .smallscreen h4,body.front .content-full .container .parallax .content.left .smallscreen h4{
+        font-size:14px;line-height:18px;width:375px;letter-spacing:0;
+        }
+    }
+    body.front .content-full .container .parallax .content.right .fda-button,body.front .content-full .container .parallax .content.left .fda-button{
+        position:absolute;bottom:74px;margin:0 auto;left:11px;right:0;
+        }
+    @media (min-width:769px){
+        body.front .content-full .container .parallax .content.right .fda-button,body.front .content-full .container .parallax .content.left .fda-button{
+        width:940px;bottom:172px;left:0;
+        }
+    }
+    body.front .content-full .container .parallax .content.right .fda-button a,body.front .content-full .container .parallax .content.left .fda-button a{
+        background:#002955;border:1px solid #ffffff;padding:4px 23px 8px 18px;color:#ffffff;font-family:'dinregular';font-size:12px;display:table;
+        }
+    @media (min-width:769px){
+        body.front .content-full .container .parallax .content.right .fda-button a,body.front .content-full .container .parallax .content.left .fda-button a{
+        padding:7px 18px;font-size:18px;-webkit-box-shadow:2px 2px 0px 0px #000000;-moz-box-shadow:2px 2px 0px 0px #000000;box-shadow:2px 2px 0px 0px #000000;
+        }
+    }
+    body.front .content-full .container .parallax .content.right .fda-button a .set-home,body.front .content-full .container .parallax .content.left .fda-button a .set-home{
+        background:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/set.png) no-repeat right 3px;width:17px;height:19px;display:inline-block;position:relative;top:1px;left:2px;
+        }
+    body.front .content-full .container .parallax .content.right .sep-left,body.front .content-full .container .parallax .content.left .sep-left{
+        position:absolute;width:32%;height:120px;bottom:-16px;z-index:1;background:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/bg-sep.png) repeat-x;
+        }
+    body.front .content-full .container .parallax .content.right .sep-right,body.front .content-full .container .parallax .content.left .sep-right{
+        position:absolute;width:37%;height:120px;bottom:0;right:0;background:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/bg-sep.png) repeat-x;z-index:0;
+        }
+    body.front .content-full .container .parallax .content.right .sep,body.front .content-full .container .parallax .content.left .sep{
+        height:71px;background-repeat:no-repeat;bottom:-16px;position:absolute;background-position:center top;margin:0 auto;z-index:1;left:0;right:0;
+        }
+    @media (min-width:769px){
+        body.front .content-full .container .parallax .content.right .sep,body.front .content-full .container .parallax .content.left .sep{
+        height:146px;width:940px;
+        }
+    }
+    body.front .content-full .container .parallax .content.right .sep .scroll,body.front .content-full .container .parallax .content.left .sep .scroll,body.front .content-full .container .parallax .content.right .sep .scroll-2,body.front .content-full .container .parallax .content.left .sep .scroll-2{
+        margin:0 auto;text-align:center;position:absolute;left:0;right:0;top:8px;width:12px;color:#002955;text-indent:-9000px;font-size:10px;font-family:'dinmedium';text-transform:uppercase;cursor:pointer;
+        }
+    @media (min-width:769px){
+        body.front .content-full .container .parallax .content.right .sep .scroll,body.front .content-full .container .parallax .content.left .sep .scroll,body.front .content-full .container .parallax .content.right .sep .scroll-2,body.front .content-full .container .parallax .content.left .sep .scroll-2{
+        top:78px;width:50px;text-indent:0;
+        }
+    }
+    body.front .content-full .container .parallax .content.right .sep .scroll a,body.front .content-full .container .parallax .content.left .sep .scroll a,body.front .content-full .container .parallax .content.right .sep .scroll-2 a,body.front .content-full .container .parallax .content.left .sep .scroll-2 a{
+        text-decoration:none;font-size:inherit;color:inherit;width:auto;
+        }
+    body.front .content-full .container .parallax .content.right .sep .scroll .ico-scroll,body.front .content-full .container .parallax .content.left .sep .scroll .ico-scroll,body.front .content-full .container .parallax .content.right .sep .scroll-2 .ico-scroll,body.front .content-full .container .parallax .content.left .sep .scroll-2 .ico-scroll{
+        background:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/scroll-mobi.png) no-repeat;height:20px;width:21px;position:absolute;display:block;left:0;right:0;top:14px;margin:0 auto;
+        }
+    @media (min-width:769px){
+        body.front .content-full .container .parallax .content.right .sep .scroll .ico-scroll,body.front .content-full .container .parallax .content.left .sep .scroll .ico-scroll,body.front .content-full .container .parallax .content.right .sep .scroll-2 .ico-scroll,body.front .content-full .container .parallax .content.left .sep .scroll-2 .ico-scroll{
+        background:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/scroll.png) no-repeat;height:16px;width:20px;
+        }
+    }
+    body.front .content-full .container .parallax .content.right .sep.separator1,body.front .content-full .container .parallax .content.left .sep.separator1{
+        background-image:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/footer-parallax-mobile.png);
+        }
+    @media (min-width:769px){
+        body.front .content-full .container .parallax .content.right .sep.separator1,body.front .content-full .container .parallax .content.left .sep.separator1{
+        background-image:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/footer-parallax.png);
+        }
+    }
+    body.front .content-full .container .parallax .content.right .sep.separator2,body.front .content-full .container .parallax .content.left .sep.separator2{
+        background-image:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/footer-parallax-mobile2.png);
+        }
+    @media (min-width:769px){
+        body.front .content-full .container .parallax .content.right .sep.separator2,body.front .content-full .container .parallax .content.left .sep.separator2{
+        background-image:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/footer-parallax2.png);
+        }
+    body.front .content-full .container .parallax .content.right .sep.separator2 a.right,body.front .content-full .container .parallax .content.left .sep.separator2 a.right{
+        top:71px;
+        }
+    }
+    body.front .content-full .container .parallax .content.right .sep.separator2 .call-home,body.front .content-full .container .parallax .content.left .sep.separator2 .call-home{
+        width:345px;font-size:20px;color:#002955;top:70px;left:50px;position:relative;display:block;font-family:'dinmedium';
+        }
+    @media (min-width:320px) and (max-width:550px){
+        body.front .content-full .container .parallax .content.right .sep.separator2 .call-home,body.front .content-full .container .parallax .content.left .sep.separator2 .call-home{
+        width:135px;font-size:12px;top:15px;left:20px;
+        }
+    }
+    @media (max-width:768px){
+        body.front .content-full .container .parallax .content.right .sep.separator2 .call-home,body.front .content-full .container .parallax .content.left .sep.separator2 .call-home{
+        width:135px;font-size:12px;top:15px;left:20px;
+        }
+    }
+    body.front .content-full .container .parallax .content.right .sep.separator2 .call-home a,body.front .content-full .container .parallax .content.left .sep.separator2 .call-home a{
+        display:initial;display:ruby;
+        }
+    body.front .content-full .container .parallax .content.right .sep a,body.front .content-full .container .parallax .content.left .sep a{
+        font-family:'dinmedium';font-size:12px;color:#002955;display:block;line-height:13.5px;
+        }
+    @media (min-width:769px){
+        body.front .content-full .container .parallax .content.right .sep a,body.front .content-full .container .parallax .content.left .sep a{
+        font-size:20px;width:300px;line-height:22px;
+        }
+    }
+    body.front .content-full .container .parallax .content.right .sep a .set-home,body.front .content-full .container .parallax .content.left .sep a .set-home{
+        background:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/set-blue-mobi.png) no-repeat;height:11px;width:12px;display:inline-block;position:relative;top:2px;left:2px;
+        }
+    @media (min-width:769px){
+        body.front .content-full .container .parallax .content.right .sep a .set-home,body.front .content-full .container .parallax .content.left .sep a .set-home{
+        background:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/set-blue.png) no-repeat;height:17px;width:19px;top:4px;left:5px;
+        }
+    }
+    body.front .content-full .container .parallax .content.right .sep a.left,body.front .content-full .container .parallax .content.left .sep a.left{
+        position:relative;top:20px;left:20px;width:126px;
+        }
+    @media (min-width:769px){
+        body.front .content-full .container .parallax .content.right .sep a.left,body.front .content-full .container .parallax .content.left .sep a.left{
+        top:71px;left:50px;width:350px;
+        }
+    }
+    body.front .content-full .container .parallax .content.right .sep a.right,body.front .content-full .container .parallax .content.left .sep a.right{
+        position:absolute;top:18px;right:6px;width:106px;
+        }
+    @media (min-width:769px){
+        body.front .content-full .container .parallax .content.right .sep a.right,body.front .content-full .container .parallax .content.left .sep a.right{
+        top:64px;right:0;width:300px;
+        }
+    }
+    body.front .content-full .container .parallax .content.right.illustration_01,body.front .content-full .container .parallax .content.left.illustration_01{
+        background:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/parallax1.jpg) no-repeat scroll;background-position:center center;background-size:cover;
+        }
+    @media (min-width:769px){
+        body.front .content-full .container .parallax .content.right.illustration_01,body.front .content-full .container .parallax .content.left.illustration_01{
+        background:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/parallax1.jpg) no-repeat fixed;background-position:center top;background-size:cover;
+        }
+    }
+    @media only screen and (min-device-width:768px) and (max-device-width:1024px) and (orientation:landscape){
+        body.front .content-full .container .parallax .content.right.illustration_01,body.front .content-full .container .parallax .content.left.illustration_01{
+        background:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/parallax1.jpg) no-repeat scroll;background-position:center top;background-size:cover;
+        }
+    }
+    @media (max-width:768px){
+        body.front .content-full .container .parallax .content.right.illustration_01 .smallscreen,body.front .content-full .container .parallax .content.left.illustration_01 .smallscreen{
+        top:60px;
+        }
+    }
+    body.front .content-full .container .parallax .content.right.illustration_01 .sep-left,body.front .content-full .container .parallax .content.left.illustration_01 .sep-left{
+        bottom:-8px;
+        }
+    @media (min-width:769px){
+        body.front .content-full .container .parallax .content.right.illustration_01 .sep-left,body.front .content-full .container .parallax .content.left.illustration_01 .sep-left{
+        bottom:-18px;
+        }
+    }
+    @media (min-width:769px){
+        body.front .content-full .container .parallax .content.right.illustration_01 .sep-left .sep-right,body.front .content-full .container .parallax .content.left.illustration_01 .sep-left .sep-right{
+        height:120px;
+        }
+    body.front .content-full .container .parallax .content.right.illustration_01 .sep-left .sep,body.front .content-full .container .parallax .content.left.illustration_01 .sep-left .sep{
+        bottom:-18px;
+        }
+    }
+    @media (max-width:768px){
+        body.front .content-full .container .parallax .content.right.illustration_01 .sep-left,body.front .content-full .container .parallax .content.left.illustration_01 .sep-left{
+        background:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/bg-sep-left.png) repeat-x;height:378px;
+        }
+    }
+    body.front .content-full .container .parallax .content.right.illustration_01 .sep-right,body.front .content-full .container .parallax .content.left.illustration_01 .sep-right{
+        height:120px;
+        }
+    @media (max-width:768px){
+        body.front .content-full .container .parallax .content.right.illustration_01 .sep-right,body.front .content-full .container .parallax .content.left.illustration_01 .sep-right{
+        background:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/bg-sep-right.png) repeat-x;height:63px;width:30%;
+        }
+    }
+    body.front .content-full .container .parallax .content.right.illustration_01 .sep,body.front .content-full .container .parallax .content.left.illustration_01 .sep{
+        bottom:-8px;
+        }
+    @media (min-width:769px){
+        body.front .content-full .container .parallax .content.right.illustration_01 .sep,body.front .content-full .container .parallax .content.left.illustration_01 .sep{
+        bottom:-18px;
+        }
+    }
+    body.front .content-full .container .parallax .content.right.illustration_02,body.front .content-full .container .parallax .content.left.illustration_02{
+        background:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/parallax2.jpg) no-repeat scroll;background-position:center center;background-size:cover;
+        }
+    @media (min-width:769px){
+        body.front .content-full .container .parallax .content.right.illustration_02,body.front .content-full .container .parallax .content.left.illustration_02{
+        background:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/parallax2.jpg) no-repeat fixed;background-position:center top;background-size:cover;
+        }
+    }
+    @media only screen and (min-device-width:768px) and (max-device-width:1024px) and (orientation:landscape){
+        body.front .content-full .container .parallax .content.right.illustration_02,body.front .content-full .container .parallax .content.left.illustration_02{
+        background:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/parallax2.jpg) no-repeat scroll;background-position:center top;background-size:cover;
+        }
+    }
+    body.front .content-full .container .parallax .content.right.illustration_02 .sep-left,body.front .content-full .container .parallax .content.left.illustration_02 .sep-left{
+        bottom:-37px;
+        }
+    @media (max-width:768px){
+        body.front .content-full .container .parallax .content.right.illustration_02 .sep-left,body.front .content-full .container .parallax .content.left.illustration_02 .sep-left{
+        background:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/bg-sep-left.png) repeat-x;height:378px;bottom:-8px;
+        }
+    }
+    body.front .content-full .container .parallax .content.right.illustration_02 .sep-right,body.front .content-full .container .parallax .content.left.illustration_02 .sep-right{
+        height:122px;bottom:-21px;z-index:1;
+        }
+    @media (max-width:768px){
+        body.front .content-full .container .parallax .content.right.illustration_02 .sep-right,body.front .content-full .container .parallax .content.left.illustration_02 .sep-right{
+        background:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/bg-sep-right.png) repeat-x;height:63px;width:30%;bottom:0;
+        }
+    }
+    body.front .content-full .container .parallax .content.right.illustration_02 .sep,body.front .content-full .container .parallax .content.left.illustration_02 .sep{
+        bottom:-8px;z-index:2;
+        }
+    @media (min-width:769px){
+        body.front .content-full .container .parallax .content.right.illustration_02 .sep,body.front .content-full .container .parallax .content.left.illustration_02 .sep{
+        bottom:-37px;
+        }
+    }
+    @media (max-width:768px){
+        body.front .content-full .container .parallax .content.right.illustration_02 .smallscreen,body.front .content-full .container .parallax .content.left.illustration_02 .smallscreen{
+        top:56px;
+        }
+    }
+    @media (max-width:768px){
+        body.front .content-full .container .parallax .content.right.illustration_02 .smallscreen h4,body.front .content-full .container .parallax .content.left.illustration_02 .smallscreen h4{
+        width:250px;
+        }
+    }
+    body.front .content-full .container .parallax .content.right.illustration_03,body.front .content-full .container .parallax .content.left.illustration_03{
+        background:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/parallax3.jpg) no-repeat scroll;background-position:center center;background-size:cover;
+        }
+    @media (min-width:769px){
+        body.front .content-full .container .parallax .content.right.illustration_03,body.front .content-full .container .parallax .content.left.illustration_03{
+        background:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/parallax3.jpg) no-repeat fixed;background-position:center top;background-size:cover;
+        }
+    body.front .content-full .container .parallax .content.right.illustration_03 .bg-triangle,body.front .content-full .container .parallax .content.left.illustration_03 .bg-triangle{
+        top:100px;
+        }
+    }
+    @media only screen and (min-device-width:768px) and (max-device-width:1024px) and (orientation:landscape){
+        body.front .content-full .container .parallax .content.right.illustration_03,body.front .content-full .container .parallax .content.left.illustration_03{
+        background:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/parallax3.jpg) no-repeat scroll;background-position:center top;background-size:cover;
+        }
+    }
+    body.front .content-full .container .parallax .content.right.illustration_03 .illustration_01 .smallscreen,body.front .content-full .container .parallax .content.left.illustration_03 .illustration_01 .smallscreen,body.front .content-full .container .parallax .content.right.illustration_03 .illustration_02 .smallscreen,body.front .content-full .container .parallax .content.left.illustration_03 .illustration_02 .smallscreen{
+        top:47px;
+        }
+    @media (min-width:769px){
+        body.front .content-full .container .parallax .content.right.illustration_03 .illustration_01 .smallscreen,body.front .content-full .container .parallax .content.left.illustration_03 .illustration_01 .smallscreen,body.front .content-full .container .parallax .content.right.illustration_03 .illustration_02 .smallscreen,body.front .content-full .container .parallax .content.left.illustration_03 .illustration_02 .smallscreen{
+        top:77px;
+        }
+    }
+    body.front .content-full .container .parallax .content.right.illustration_03 .illustration_01 .smallscreen h4,body.front .content-full .container .parallax .content.left.illustration_03 .illustration_01 .smallscreen h4,body.front .content-full .container .parallax .content.right.illustration_03 .illustration_02 .smallscreen h4,body.front .content-full .container .parallax .content.left.illustration_03 .illustration_02 .smallscreen h4{
+        line-height:14px;padding-top:0;
+        }
+    body.front .content-full .container .parallax .content.right.illustration_03 .illustration_03 .smallscreen,body.front .content-full .container .parallax .content.left.illustration_03 .illustration_03 .smallscreen{
+        top:47px;
+        }
+    @media (min-width:769px){
+        body.front .content-full .container .parallax .content.right.illustration_03 .illustration_03 .smallscreen,body.front .content-full .container .parallax .content.left.illustration_03 .illustration_03 .smallscreen{
+        top:77px;
+        }
+    }
+    body.front .content-full .container .parallax .content.right.illustration_03 .illustration_03 .smallscreen h4,body.front .content-full .container .parallax .content.left.illustration_03 .illustration_03 .smallscreen h4{
+        line-height:14px;padding-top:0;
+        }
+    body.front .content-full .container .parallax .content.right.illustration_03 .backtotop,body.front .content-full .container .parallax .content.left.illustration_03 .backtotop{
+        position:absolute;bottom:65px;right:-113px;width:187px;z-index:99;
+        }
+    body.front .content-full .container .parallax .content.right.illustration_03 .backtotop a,body.front .content-full .container .parallax .content.left.illustration_03 .backtotop a{
+        font-family:'dinmedium';color:#ffffff;font-size:10px;text-transform:uppercase;
+        }
+    @media (min-width:769px){
+        body.front .content-full .container .parallax .content.right.illustration_03 .backtotop,body.front .content-full .container .parallax .content.left.illustration_03 .backtotop{
+        position:absolute;bottom:68px;width:940px;left:0;display:block;right:0;margin:0 auto;text-align:right;
+        }
+    body.front .content-full .container .parallax .content.right.illustration_03 .backtotop a,body.front .content-full .container .parallax .content.left.illustration_03 .backtotop a{
+        font-family:'dinmedium';color:#ffffff;font-size:10px;text-transform:uppercase;
+        }
+    }
+    body.front .content-full .container .parallax .content.right.illustration_03 .second-section,body.front .content-full .container .parallax .content.left.illustration_03 .second-section{
+        position:absolute;bottom:1px;width:940px;left:0;display:block;right:0;margin:0 auto;text-align:right;z-index:99;
+        }
+    body.front .content-full .container .parallax .content.right.illustration_03 .separator,body.front .content-full .container .parallax .content.left.illustration_03 .separator {
+        position:absolute;bottom:0;right:0;width:187px;
+        }
+    @media (min-width:769px){
+        body.front .content-full .container .parallax .content.right.illustration_03 .separator,body.front .content-full .container .parallax .content.left.illustration_03 .separator {
+        width:940px;left:0;margin:0 auto;text-align:right;
+        }
+    }
+    @media (min-width:769px){
+        body.front .content-full .container .parallax .content.right.illustration_03 .separator .border-css,body.front .content-full .container .parallax .content.left.illustration_03 .separator .border-css{
+        background:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/bg-explore.png) repeat-x;height:60px;position:relative;width:250px;float:right;
+        }
+    }
+    @media (max-width:768px){
+        body.front .content-full .container .parallax .content.right.illustration_03 .separator .border-css,body.front .content-full .container .parallax .content.left.illustration_03 .separator .border-css{
+        border-bottom:50px solid #d9dbdc;border-left:35px solid transparent;border-right:0 solid transparent;
+        }
+    }
+    body.front .content-full .container .parallax .content.right.illustration_03 .separator a,body.front .content-full .container .parallax .content.left.illustration_03 .separator a{
+        position:absolute;right:40px;text-transform:uppercase;color:#002955;z-index:999;font-size:12px;font-family:'dinmedium';right:14px;top:35px;
+        }
+    @media (min-width:769px){
+        body.front .content-full .container .parallax .content.right.illustration_03 .separator a,body.front .content-full .container .parallax .content.left.illustration_03 .separator a{
+        font-size:19px;right:4px;top:18px;
+        }
+    }
+    body.front .content-full .container .parallax .content.right.illustration_03 .separator a .set-home,body.front .content-full .container .parallax .content.left.illustration_03 .separator a .set-home{
+        background:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/set-blue-mobi.png) no-repeat;height:17px;width:19px;display:inline-block;position:relative;top:7px;left:5px;
+        }
+    @media (min-width:769px){
+        body.front .content-full .container .parallax .content.right.illustration_03 .separator a .set-home,body.front .content-full .container .parallax .content.left.illustration_03 .separator a .set-home{
+        background:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/set-blue.png) no-repeat;top:2px;left:5px;
+        }
+    }
+    body.front .content-full .container .parallax .content.right.illustration_03 .separator-right,body.front .content-full .container .parallax .content.left.illustration_03 .separator-right{
+        display:none;
+        }
+    @media (min-width:769px){
+        body.front .content-full .container .parallax .content.right.illustration_03 .separator-right,body.front .content-full .container .parallax .content.left.illustration_03 .separator-right{
+        background:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/bg-sep.png) repeat-x 0 -35px;height:60px;width:22%;position:absolute;bottom:0;display:block;right:0;
+        }
+    }
+    @media screen and (min-width:1600px){
+        body.front .content-full .container .parallax .content.right.illustration_03 .separator-right,body.front .content-full .container .parallax .content.left.illustration_03 .separator-right{
+        width:30%;
+        }
+    }
+    @media (min-width:1024px){
+        body.home .separator2 .left.call-home u,body.home .separator2 .left.call-home .phone-number {
+        text-decoration:none;
+        }
+    }
+    @media only screen and (min-device-width:768px) and (max-device-width:1024px) and (orientation:portrait){
+        body.front .content-full .container .parallax .content.right .bg-triangle,body.front .content-full .container .parallax .content.left .bg-triangle{
+        width:46%;
+        }
+    }
+    @media (max-width:768px){
+        nav.navbar {
+        position:absolute;
+        }
+    }
+    nav.navbar {
+        background:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/bg-header.png) repeat-x;border:0;height:68px;z-index:500;
+        }
+    nav.navbar:before{
+        content:'';display:block;height:20px;border-left:0px solid transparent;border-right:10px solid transparent;width:42%;position:absolute;border-top:10px solid #002955;top:100%;margin-top:-1px;
+        }
+    @media screen and (max-width:767px){
+        nav.navbar:before{
+        width:135px;
+        }
+    }
+    nav.navbar .container {
+        padding-right:8px;padding-left:8px;
+        }
+    nav.navbar .container a.logo{
+        width:36%;padding-right:0;padding-bottom:0;margin:0;
+        }
+    @media screen and (max-width:767px){
+        nav.navbar .container a.logo{
+        position:absolute;width:115px;bottom:0;
+        }
+    }
+    nav.navbar .container a.logo img{
+        width:112px;position:relative;
+        }
+    nav.navbar .container .description-legal p{
+        color:#999999;font-size:9px;line-height:9.5px;padding-top:5px;margin-bottom:10px;
+        }
+    nav.navbar .container .legal-menu h2{
+        display:none;
+        }
+    nav.navbar .container .legal-menu ul.menu{
+        float:right;
+        }
+    @media screen and (max-width:767px){
+        nav.navbar .container .legal-menu ul.menu{
+        position:absolute;bottom:10px;right:8px;
+        }
+    }
+    nav.navbar .container .legal-menu ul.menu li{
+        float:left;border-right:1px solid #8caac8;
+        }
+    nav.navbar .container .legal-menu ul.menu li a{
+        padding:0 3px;font-size:10px;line-height:10px;color:#8caac8;text-decoration:none;
+        }
+    nav.navbar .container .legal-menu ul.menu li a:hover,nav.navbar .container .legal-menu ul.menu li a:focus{
+        background:none;
+        }
+    nav.navbar .container .legal-menu ul.menu li.last{
+        border-right:0;
+        }
+    nav.navbar .container .legal-menu ul.menu li.last a{
+        padding-right:0;
+        }
+    nav.navbar .container .navbar-header {
+        right:0;
+        }
+    nav.navbar .container .navbar-header button{
+        right:0;top:74px;border:0;position:absolute;padding:0;background-color:transparent;outline:none;border-radius:0;
+        }
+    nav.navbar .container .navbar-header button .icon-bar {
+        height:3px;width:21px;border-radius:0px;
+        }
+    nav.navbar .container .navbar-header button.navbar-toggle .close-button{
+        display:none;
+        }
+    nav.navbar .container .navbar-header button.navbar-toggle.collapsed .icon-bar {
+        display:none;
+        }
+    nav.navbar .container .navbar-header button.navbar-toggle.collapsed .close-button{
+        display:block;width:21px;color:#fff;height:21px;background:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/ico-close.png) no-repeat;
+        }
+    @media screen and (max-width:767px){
+        nav.navbar .container .navbar-collapse{
+        width:210px;background:#002852;border:0;float:right;margin-right:-8px;margin-top:78px;padding:0;overflow:hidden;max-height:inherit;
+        }
+    }
+    @media only screen and (min-device-width:320px) and (max-device-width:568px) and (-webkit-min-device-pixel-ratio:2) and (orientation:portrait){
+        nav.navbar .container .navbar-collapse{
+        margin-top:69px;
+        }
+    }
+    nav.navbar .container .navbar-collapse nav h2{
+        display:none;
+        }
+    @media screen and (max-width:767px){
+        nav.navbar .container .navbar-collapse nav ul.menu li{
+        border-bottom:3px solid #8caac8;
+        }
+    nav.navbar .container .navbar-collapse nav ul.menu li.dropdown:nth-child(3){
+        border-bottom:3px solid #8caac8;clear:both;
+        }
+    }
+    nav.navbar .container .navbar-collapse nav ul.menu li.last{
+        border-bottom:0;clear:both;
+        }
+    nav.navbar .container .navbar-collapse nav ul.menu li.last ul.dropdown-menu{
+        border-top:0;
+        }
+    @media screen and (max-width:767px){
+        nav.navbar .container .navbar-collapse nav ul.menu li.last ul.dropdown-menu{
+        border-top:3px solid #8caac8;border-bottom:3px solid transparent;padding-top:0;
+        }
+    }
+    nav.navbar .container .navbar-collapse nav ul.menu li a{
+        color:#ffffff;font-size:17px;font-family:'dinmedium';
+        }
+    @media screen and (max-width:767px){
+        nav.navbar .container .navbar-collapse nav ul.menu li a{
+        padding-left:15px;width:100%;padding:9px 15px;background-color:transparent;clear:both;
+        }
+    }
+    nav.navbar .container .navbar-collapse nav ul.menu li a:hover {
+        background:none;
+        }
+    @media screen and (max-width:767px){
+        nav.navbar .container .navbar-collapse nav ul.menu li ul.dropdown-menu{
+        position:relative;background:none;border-bottom:3px solid #8caac8;box-shadow:none;border-left:0;border-radius:0;border-right:0;border-top:0;width:100%;background:#547290;display:none;padding:0;
+        }
+    }
+    nav.navbar .container .navbar-collapse nav ul.menu li ul.dropdown-menu li a{
+        white-space:pre-wrap;line-height:17px;font-size:13px;padding:12px 15px 12px 30px;text-transform:inherit;
+        }
+    nav.navbar .container .navbar-collapse nav ul.menu li.dropdown a span.caret{
+        width:8px;height:4px;margin:0;border:0;padding:15px;background:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/arrow-menu-mobile.png) center no-repeat;float:right;
+        }
+    .ie9 .ordering h1.page-header {
+        font-family:'DIN Next W06 Regular' !important;font-size:31px;
+        }
+    .ie9 .ordering nav.navbar .container .navbar-collapse nav ul.menu li a{
+        font-family:'DIN Next W06 Medium' !important;font-size:20px;padding-bottom:5px;
+        }
+    .ie9 .ordering nav.navbar .container .navbar-collapse nav ul.menu li .dropdown-menu li{
+        height:48px;
+        }
+    .ie9 .ordering nav.navbar .container .navbar-collapse nav ul.menu li .dropdown-menu li a{
+        font-size:14px;
+        }
+    .ie9 .ordering .callout .callout-header {
+        font-family:'DIN Next W06 Medium' !important;
+        }
+    .ie9 .node-type-webform section .region-content .node-webform .webform-client-form button{
+        font-family:'DIN Next W06 Light' !important;
+        }
+    .not-front .navbar-header button .icon-bar {
+        background-color:#3a6592;
+        }
+    .not-front .navbar-header button .close-button{
+        background-image:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/ico-close-blue.png) !important;background-size:cover !important;
+        }
+    @media (max-width:768px){
+        .front nav.navbar .container .navbar-header button{
+        top:74px;
+        }
+    body.products .content-full{
+        padding-top:60px;
+        }
+    body.products .view-products{
+        margin-top:50px;
+        }
+    }
+    @media screen and (min-width:767px){
+        .container {
+        width:970px;
+        }
+    nav.navbar {
+        height:89px;
+        }
+    nav.navbar:before{
+        width:40%;top:89px;border-right:20px solid transparent;border-top:20px solid #002955;
+        }
+    nav.navbar .container {
+        padding-right:15px;padding-left:15px;
+        }
+    nav.navbar .container a.logo{
+        width:initial;margin:27px 12px 0 0;padding:0;
+        }
+    nav.navbar .container a.logo img{
+        width:initial;
+        }
+    nav.navbar .container .description-legal{
+        height:35px;width:633px;float:right;
+        }
+    nav.navbar .container .description-legal p{
+        font-size:12px;text-align:right;line-height:14px;padding-top:8px;
+        }
+    nav.navbar .container .legal-menu h2{
+        display:none;
+        }
+    nav.navbar .container .legal-menu ul.menu{
+        padding-top:11px;
+        }
+    nav.navbar .container .legal-menu ul.menu li{
+        float:left;
+        }
+    nav.navbar .container .legal-menu ul.menu li a{
+        padding:0 8px;font-size:12px;line-height:12px;
+        }
+    nav.navbar .container .legal-menu ul.menu li a:hover {
+        text-decoration:underline;color:#ffffff;
+        }
+    nav.navbar .container .navbar-collapse nav ul.menu{
+        float:right;margin-top:-13px;
+        }
+    nav.navbar .container .navbar-collapse nav ul.menu li{
+        float:left;background:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/bg-menu-header.jpg) repeat;
+        }
+    nav.navbar .container .navbar-collapse nav ul.menu li.first{
+        display:none;
+        }
+    nav.navbar .container .navbar-collapse nav ul.menu li a{
+        color:#002955;font-size:19px;padding:7px 14px;text-transform:uppercase;text-decoration:none;
+        }
+    nav.navbar .container .navbar-collapse nav ul.menu li a:hover {
+        background:none;
+        }
+    nav.navbar .container .navbar-collapse nav ul.menu li a[href="/ordering"]{
+        cursor:default;
+        }
+    nav.navbar .container .navbar-collapse nav ul.menu li ul.dropdown-menu{
+        border:0;width:175px;border-radius:0;padding:0;margin-top:0;
+        }
+    nav.navbar .container .navbar-collapse nav ul.menu li ul.dropdown-menu li{
+        width:175px;background-position:bottom;
+        }
+    nav.navbar .container .navbar-collapse nav ul.menu li ul.dropdown-menu li a{
+        white-space:pre-wrap;line-height:17px;font-size:14px;color:#000000;padding:9px 15px 12px 17px;background:#dce4ed;
+        }
+    nav.navbar .container .navbar-collapse nav ul.menu li ul.dropdown-menu li a:hover {
+        background:#aabdd1;
+        }
+    nav.navbar .container .navbar-collapse nav ul.menu li ul.dropdown-menu li a:not([href*="ordering?"]).active{
+        background:#aabdd1;
+        }
+    nav.navbar .container .navbar-collapse nav ul.menu li ul.dropdown-menu li.first{
+        display:block;
+        }
+    nav.navbar .container .navbar-collapse nav ul.menu li ul.dropdown-menu li.last a{
+        padding:9px 15px 12px 17px;
+        }
+    nav.navbar .container .navbar-collapse nav ul.menu li ul.dropdown-menu li:not(:hover) a{
+        border-bottom-color:transparent;
+        }
+    nav.navbar .container .navbar-collapse nav ul.menu li.dropdown{
+        border-bottom:0;
+        }
+    nav.navbar .container .navbar-collapse nav ul.menu li.dropdown a span.caret{
+        display:none;
+        }
+    nav.navbar .container .navbar-collapse nav ul.menu li.last{
+        border-bottom:0;clear:none;
+        }
+    nav.navbar .container .navbar-collapse nav ul.menu li.last ul.dropdown-menu{
+        border-bottom:0;left:-39px;
+        }
+    nav.navbar .container .navbar-collapse nav ul.menu li.last ul.dropdown-menu li{
+        height:41px;
+        }
+    nav.navbar .container .navbar-collapse nav ul.menu li.last ul.dropdown-menu li a{
+        padding:14px 15px 17px 17px;
+        }
+    nav.navbar .container .navbar-collapse nav ul.menu li:hover {
+        background:linear-gradient(to bottom,#3d6996,#2d547d);
+        }
+    nav.navbar .container .navbar-collapse nav ul.menu li:hover a{
+        color:#ffffff;
+        }
+    nav.navbar .container .navbar-collapse nav ul.menu li.active,nav.navbar .container .navbar-collapse nav ul.menu li.open,nav.navbar .container .navbar-collapse nav ul.menu li.active-trail{
+        background:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/bg-active-menu.jpg) repeat;
+        }
+    nav.navbar .container .navbar-collapse nav ul.menu li.active a,nav.navbar .container .navbar-collapse nav ul.menu li.open a,nav.navbar .container .navbar-collapse nav ul.menu li.active-trail a{
+        color:#ffffff;
+        }
+    nav.navbar .container .navbar-collapse nav ul.menu li.open a{
+        background:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/bg-active-menu.jpg) repeat;
+        }
+    }
+    @media (min-width:767px) and (max-width:992px){
+        .container {
+        width:750px;
+        }
+    nav.navbar:before{
+        width:37%;top:88px;
+        }
+    nav.navbar .container a.logo{
+        width:32%;margin:37px 2px 0 0;
+        }
+    nav.navbar .container a.logo img{
+        width:100%;
+        }
+    nav.navbar .container .description-legal{
+        width:466px;
+        }
+    nav.navbar .container .description-legal p{
+        line-height:13px;padding-top:8px;
+        }
+    nav.navbar .container .legal-menu ul.menu{
+        padding-top:17px;
+        }
+    nav.navbar .container .legal-menu ul.menu li a{
+        padding:0 8px;font-size:12px;line-height:12px;
+        }
+    nav.navbar .container .navbar-collapse nav ul.menu{
+        margin-top:-6px;
+        }
+    nav.navbar .container .navbar-collapse nav ul.menu li a{
+        padding:3px 8px;font-size:15px;
+        }
+    nav.navbar .container .navbar-collapse nav ul.menu li.last ul.dropdown-menu{
+        left:-74px;
+        }
+    }
+    .ie nav.navbar .container a.logo{
+        width:30%;
+        }
+    .ie nav.navbar .container a.logo img{
+        width:247px;padding-bottom:11px;
+        }
+    .front .footer,.products .footer {
+        margin-top:0;
+        }
+    .footer {
+        background:#e2e9f2;padding-top:8px;padding-bottom:8px;font-size:9px;text-align:center;border-top:1px solid #E5E5E5;position:relative;color:#666666;
+        }
+    .footer .region-footer .info{
+        display:none;
+        }
+    .footer .region-footer .img-footer {
+        margin-top:7px;
+        }
+    .footer .region-footer .img-footer a{
+        display:block;
+        }
+    .footer .region-footer .copyright{
+        margin-top:25px;
+        }
+    .footer .region-footer .copyright p:first-child{
+        margin:0 0 2px;
+        }
+    .footer .region-footer .copyright .break{
+        white-space:nowrap;
+        }
+    .footer .region-footer h2{
+        display:none;
+        }
+    .footer .region-menu-footer h2.block-title{
+        display:none;
+        }
+    .footer .region-menu-footer ul.menu{
+        position:absolute;padding:10px 0;
+        }
+    @media screen and (max-width:767px){
+        .footer .region-menu-footer ul.menu{
+        top:0;left:0;text-align:center;width:100%;
+        }
+    }
+    .footer .region-menu-footer ul.menu li{
+        border-right:1px solid #002955;display:inline-block;
+        }
+    .footer .region-menu-footer ul.menu li:last-child{
+        border:0;
+        }
+    .footer .region-menu-footer ul.menu li a{
+        padding:0 7px;font-size:10px;line-height:12px;color:#002955;text-decoration:none;
+        }
+    .footer .region-menu-footer ul.menu li a:hover {
+        text-decoration:underline;color:#002955;background:transparent;
+        }
+    .footer .region-menu-footer ul.menu li a:focus{
+        background:transparent;
+        }
+    .footer .region-menu-footer ul.menu li a.active{
+        background:transparent;
+        }
+    @media screen and (min-width:767px){
+        .footer {
+        font-size:12px;text-align:left;padding-bottom:0;padding-top:20px;
+        }
+    .footer .container {
+        width:100%;max-width:1028px;
+        }
+    .footer .region-footer .info{
+        display:block;margin-bottom:25px;margin-top:9px;
+        }
+    .footer .region-footer .img-footer {
+        width:82px;margin:0;
+        }
+    .footer .region-footer .copyright{
+        width:88%;float:right;padding:10px 20px;margin:0;
+        }
+    .footer .region-footer .copyright p:first-child{
+        float:left;
+        }
+    .footer .region-menu-footer {
+        width:100%;background:#002955;position:relative;height:30px;left:0;
+        }
+    .footer .region-menu-footer:before{
+        content:"";display:block;width:100%;position:relative;top:-1px;background:#e2e9f2;transform:skewX(-45deg);-webkit-transform:skewX(-45deg);-moz-transform:skewX(-45deg);-o-transform:skewX(-45deg);-ms-transform:skewX(-45deg);height:20px;left:-43%;
+        }
+    .footer .region-menu-footer .block-menu{
+        margin:0 auto;max-width:940px;
+        }
+    .footer .region-menu-footer .block-menu ul.menu{
+        position:relative;text-align:right;margin-top:-10px;padding:0;
+        }
+    .footer .region-menu-footer .block-menu ul.menu li{
+        border-right:1px solid #8caac8;
+        }
+    .footer .region-menu-footer .block-menu ul.menu li a{
+        font-size:12px;color:#8caac8;
+        }
+    .footer .region-menu-footer .block-menu ul.menu li a:hover {
+        color:#ffffff;
+        }
+    .footer .region-menu-footer .block-menu ul.menu li a:focus{
+        color:#8caac8;
+        }
+    .footer .region-menu-footer .block-menu ul.menu li:last-child{
+        border-right:none;
+        }
+    }
+    @media (min-width:768px) and (max-width:831px){
+        .footer .region-footer .copyright{
+        text-align:right;padding-right:0px;
+        }
+    .footer .region-footer .copyright p:first-child{
+        width:100%;float:right;
+        }
+    .footer .region-footer .copyright div{
+        width:100%;float:right;
+        }
+    .footer .region-footer .img-footer {
+        padding-top:13px;padding-bottom:13px;
+        }
+    }
+    @media only screen and (min-device-width:768px) and (max-device-width:1024px) and (orientation:portrait){
+        .footer .region-menu-footer .block-menu ul.menu li a:focus,.footer .region-menu-footer .block-menu ul.menu li a:hover {
+        color:#8caac8 !important;text-decoration:none;
+        }
+    .footer .container {
+        padding:0px;width:730px;
+        }
+    }
+    @media only screen and (min-device-width:768px) and (max-device-width:1024px) and (orientation:landscape){
+        .footer .region-menu-footer .block-menu ul.menu li a:focus,.footer .region-menu-footer .block-menu ul.menu li a:hover {
+        color:#8caac8 !important;text-decoration:none;
+        }
+    }
+    @media (min-width:1120px){
+        .footer .region-footer section:nth-child(2):before{
+        left:-50%;margin-left:200px;
+        }
+    .footer .region-footer section ul.menu{
+        width:1120px;left:50%;margin-left:-560px;
+        }
+    }
+    .callout{
+        margin-top:-1px;
+        }
+    .callout .callout-header {
+        background:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/phone-inverse.png) no-repeat;color:#fff;padding:5px 20px;line-height:1.3;font-family:'dinbold';
+        }
+    @media screen and (max-width:767px){
+        .callout .callout-header {
+        width:100%;
+        }
+    .callout .callout-header .phone-number,.callout .callout-header .phone-number:hover {
+        text-decoration:underline;
+        }
+    }
+    @media screen and (min-width:767px){
+        .callout.contactus-callout .callout-body{
+        float:right;
+        }
+    }
+    .callout.contactus-callout .contactus-bottom-block{
+        padding:20px 0 30px;
+        }
+    @media screen and (max-width:767px){
+        .callout.contactus-callout .contactus-bottom-block{
+        padding:0 20px 30px;
+        }
+    }
+    @media (max-width:1023px){
+        .callout.contactus-callout .contactus-bottom-block .phone-number,.callout.contactus-callout .contactus-bottom-block u .phone-number {
+        text-decoration:underline;
+        }
+    }
+    @media (min-width:1024px){
+        .callout.contactus-callout .contactus-bottom-block .phone-number,.callout.contactus-callout .contactus-bottom-block u .phone-number {
+        text-decoration:none;
+        }
+    }
+    @media screen and (max-width:767px){
+        .callout .callout-footer {
+        width:305px;height:77px;background:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/phone-inverse-mobile-footer.png) no-repeat;color:#ffffff;padding-top:7px;padding-left:10px;font-size:13px;font-family:'dinbold';line-height:16px;right:15px;
+        }
+    .callout .callout-footer a,.callout .callout-footer a:link,.callout .callout-footer a:hover {
+        color:#ffffff;text-decoration:underline;
+        }
+    }
+    .callout .callout-body{
+        padding:20px;
+        }
+    .ordering-usemp .content-full .for-medical a,.ordering-usemp .content-full .for-medical a:link{
+        color:#000000;text-decoration:underline;
+        }
+    .ordering-usemp .content-full a.pfizermed-link{
+        color:#3a6592;text-decoration:underline;
+        }
+    .ordering-usemp .content-full .calltout{
+        margin:73px 0;
+        }
+    .ordering-usemp .content-full .callout-body{
+        padding:20px 0;
+        }
+    .ordering-usemp .content-full .button-blue{
+        text-transform:uppercase;width:230px;text-align:right;font-size:14px;left:-15px;padding:5px 20px 5px 5px;
+        }
+    .ordering-usemp .content-full p:first-child{
+        margin-top:20px;
+        }
+    .ordering-usemp .content-full p{
+        margin:0 0 5px;
+        }
+    .ordering-usemp .content-full h3.title-description{
+        margin:17px 0 7px;
+        }
+    .ordering-usemp .content-full span.no-phone a{
+        text-decoration:none;
+        }
+    .contactus a.pfizermed-link{
+        color:#3a6592;text-decoration:underline;
+        }
+    .resources-fdaalerts .content-full .node-simple-page ul{
+        padding-left:0;list-style:none;
+        }
+    .resources-fdaalerts .content-full .node-simple-page ul li{
+        padding-bottom:21px;
+        }
+    .resources-fdaalerts .content-full .node-simple-page ul li:first-child{
+        padding-top:30px;
+        }
+    .resources-fdaalerts .content-full .node-simple-page ul li .underline{
+        border-bottom:solid 1px #3a6592;
+        }
+    .resources-fdaalerts .content-full .node-simple-page ul li .underline a:hover {
+        text-decoration:none;
+        }
+    .resources-fdaalerts .content-full .node-simple-page ul li a{
+        color:#3a6592;border-bottom:solid 1px #3a6592;text-decoration:none;display:inline;
+        }
+    .ordering-distributors .content-full .node-simple-page a{
+        text-decoration:underline;
+        }
+    .ordering-distributors .content-full .node-simple-page p:first-child{
+        margin-top:20px;
+        }
+    .ordering-distributors .content-full .node-simple-page h1{
+        margin-bottom:20px;
+        }
+    .ordering-distributors .content-full .node-simple-page ul{
+        list-style:none;position:relative;margin-left:-40px;
+        }
+    .ordering-distributors .content-full .node-simple-page ul li{
+        padding-bottom:10px;
+        }
+    .ordering-distributors .content-full .node-simple-page hr {
+        width:100%;float:left;
+        }
+    .ordering-distributors .content-full .node-simple-page .authorized-distributors{
+        float:left;
+        }
+    .ordering-distributors .content-full .node-simple-page .authorized-distributors ul{
+        margin-left:-40px;list-style:none;position:relative;float:left;
+        }
+    .ordering-distributors .content-full .node-simple-page .authorized-distributors ul li{
+        padding-bottom:10px;
+        }
+    .ordering-distributors .content-full .node-simple-page .authorized-distributors .text-underline{
+        border-bottom:1px solid #000000;
+        }
+    .ordering-distributors .content-full .node-simple-page .authorized-distributors a.distributors-link{
+        text-decoration:none;color:#000000;
+        }
+    .ordering-distributors .content-full .node-simple-page .second-section{
+        float:left;width:100%;
+        }
+    .ordering-distributors .content-full .node-simple-page .second-section ul{
+        margin-left:-40px;list-style:none;float:left;width:100%;
+        }
+    .ordering-distributors .content-full .node-simple-page .second-section ul li{
+        padding-bottom:10px;
+        }
+    .ordering-distributors .content-full .node-simple-page .footnote{
+        float:left;width:100%;
+        }
+    .ordering-distributors .content-full .node-simple-page .for-medical{
+        float:right;
+        }
+    .ordering-distributors .content-full .node-simple-page .for-medical:first-child{
+        margin-bottom:20px;
+        }
+    .ordering-distributors .content-full .node-simple-page .title-distributors{
+        width:100%;display:table;
+        }
+    .ordering-distributors .content-full .node-simple-page .subtitle-distributors{
+        padding-left:0;
+        }
+    .ordering-distributors .content-full .node-simple-page .button-blue{
+        width:initial;padding:13px 15px;text-transform:uppercase;font-size:14px;margin-right:13px;margin-top:30px;margin-bottom:20px;text-decoration:none;float:right;
+        }
+    .ordering-distributors .content-full .node-simple-page .col-md-9,.ordering-distributors .content-full .node-simple-page .col-xs-12,.ordering-distributors .content-full .node-simple-page .col-md-3{
+        padding:0;
+        }
+    .mobile .ordering-usemp .button-blue{
+        float:none;right:0;
+        }
+    .mobile .ordering-usemp .callout{
+        margin:30px 0;
+        }
+    .mobile .ordering-distributors .content-full .node-simple-page .authorized-distributors ul + ul{
+        padding-left:39px;
+        }
+    .node-type-simple-page hgroup,.page-sitemap hgroup{
+        width:100%;
+        }
+    .references article{
+        color:#282828;
+        }
+    @media screen and (min-width:767px){
+        .node-simple-page #certified-safety-act img.img-responsive{
+        float:left;margin-right:5px;margin-left:0px;
+        }
+    }
+    .privacy-policy-link{
+        height:14px;border-bottom:1px solid;
+        }
+    @media screen and (min-width:767px){
+        .callout{
+        margin:0 15px;
+        }
+    .callout .callout-header {
+        background:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/phone-inverse-desk.png) no-repeat;padding:8px 20px;font-size:18px;
+        }
+    .callout .callout-body{
+        padding:30px 0;line-height:1.24em;
+        }
+    .callout .callout-footer {
+        background:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/phone-inverse-desk-footer.png) no-repeat;color:#fff;padding:10px 40px 10px 20px;left:0;line-height:1.3;font-family:'dinbold';font-size:18px;width:443px;
+        }
+    .callout .callout-footer a,.callout .callout-footer a:link,.callout .callout-footer a:hover,.callout .callout-footer a:visited{
+        color:#ffffff;text-decoration:none;cursor:text;
+        }
+    .ordering-usemp .content-full .callout{
+        margin:73px 0;
+        }
+    .ordering-usemp .content-full ul li{
+        margin-bottom:5px;
+        }
+    .ordering-usemp .content-full .button-blue{
+        width:274px;padding:8px 20px 8px 5px;font-size:18px;float:right;
+        }
+    .ordering-usemp .content-full .callout-body{
+        padding:62px 0;width:493px;
+        }
+    .ordering-usemp .content-full p{
+        margin:0 0 10px;
+        }
+    .ordering-usemp .content-full .for-medical a,.ordering-usemp .content-full .for-medical a:link,.ordering-usemp .content-full .for-medical a:hover,.ordering-usemp .content-full .for-medical a:visited{
+        color:#000000;text-decoration:none;cursor:text;
+        }
+    .ordering-usemp .content-full a.pfizermed-link{
+        color:#3a6592;text-decoration:underline;
+        }
+    .ordering-distributors .content-full .node-simple-page h1{
+        margin-bottom:20px;
+        }
+    .ordering-distributors .content-full .node-simple-page ul{
+        list-style:none;position:relative;margin-left:-10px;
+        }
+    .ordering-distributors .content-full .node-simple-page ul li{
+        padding-bottom:25px;
+        }
+    .ordering-distributors .content-full .node-simple-page .authorized-distributors{
+        float:left;width:100%;
+        }
+    .ordering-distributors .content-full .node-simple-page .authorized-distributors ul{
+        padding:0;margin-left:0;list-style:none;position:relative;float:left;
+        }
+    .ordering-distributors .content-full .node-simple-page .authorized-distributors ul + ul{
+        padding-left:75px;
+        }
+    .ordering-distributors .content-full .node-simple-page .authorized-distributors + .footnote{
+        margin-left:-5.5px;
+        }
+    .ordering-distributors .content-full .node-simple-page .second-section{
+        float:left;
+        }
+    .ordering-distributors .content-full .node-simple-page .second-section ul{
+        margin-left:-10px;list-style:none;position:relative;float:left;width:50%;
+        }
+    .ordering-distributors .content-full .node-simple-page .second-section ul li{
+        padding-bottom:25px;
+        }
+    .ordering-distributors .content-full .node-simple-page .footnote{
+        float:left;
+        }
+    .ordering-distributors .content-full .node-simple-page .for-medical{
+        float:left;
+        }
+    .ordering-distributors .content-full .node-simple-page .title-distributors{
+        width:54%;
+        }
+    .ordering-distributors .content-full .node-simple-page .subtitle-distributors{
+        padding-left:30px;
+        }
+    .ordering-distributors .content-full .node-simple-page .button-blue{
+        float:right;width:193px;margin-right:19px;margin-top:20px;font-size:18px;
+        }
+    .ordering-distributors .content-full .node-simple-page .col-md-9,.ordering-distributors .content-full .node-simple-page .col-xs-12,.ordering-distributors .content-full .node-simple-page .col-md-3{
+        padding:0;
+        }
+    }
+    .page-sitemap .container {
+        padding-right:30px;padding-left:30px;
+        }
+    .page-sitemap .site-map-menu li a{
+        border-bottom:solid 1px #3a6592;text-decoration:none;
+        }
+    @media (min-width:767px) and (max-width:992px){
+        .ordering-usemp .content-full .callout-body{
+        width:100%;padding:20px 15px 10px;
+        }
+    .ordering-usemp .content-full .callout-body .button-blue{
+        float:left;
+        }
+    }
+    @media screen and (min-width:767px){
+        .contactus .callout .callout-body{
+        padding:30px 0;line-height:1.24em;font-size:13.8px;letter-spacing:-0.4px;
+        }
+    a.pfizermed-link{
+        color:#3a6592;text-decoration:underline;
+        }
+    }
+    @media 992px{
+        .contactus .sub-title{
+        position:absolute;top:150px;
+        }
+    }
+    .careers .img-responsive,.about .img-responsive{
+        margin:0 auto 25px;
+        }
+    .careers .node a,.about .node a{
+        color:#449fff;text-decoration:underline;
+        }
+    .careers .img-responsive{
+        float:right;
+        }
+    .about .node-simple-page .careers-text{
+        padding-top:5px;margin-bottom:25px;
+        }
+    .about .node-simple-page .callout-footer {
+        font-size:13px;
+        }
+    .about .node-simple-page .button-box{
+        float:right;margin-right:22px;
+        }
+    .about .node-simple-page .button-box a{
+        text-decoration:none;color:#ffffff;
+        }
+    .about .node-simple-page .button-box .button-blue{
+        font-size:18px;padding-left:16px;padding-right:16px;
+        }
+    .about .node-simple-page .button-box .button-blue span{
+        color:#8caac8;
+        }
+    @media screen and (min-width:767px){
+        .careers .content-full .media-element-container {
+        float:right;
+        }
+    .careers .image{
+        margin:0;
+        }
+    .careers .img-responsive{
+        float:right;margin-left:100px;
+        }
+    .careers .careers-text{
+        padding-top:25px;float:left;width:449px;
+        }
+    .about .node-simple-page .image{
+        margin:0;
+        }
+    .about .node-simple-page .img-responsive{
+        float:right;margin-left:45px;
+        }
+    .about .node-simple-page .careers-text{
+        padding-top:25px;
+        }
+    .about .node-simple-page .button-box{
+        margin-top:52px;
+        }
+    }
+    .node-type-webform section #confirmation-page .modal-dialog .modal-content{
+        box-shadow:none;border-radius:0;border:10px solid #002955;width:288px;margin:120px auto;
+        }
+    @media screen and (min-width:767px){
+        .node-type-webform section #confirmation-page .modal-dialog .modal-content{
+        width:528px;margin:120px auto;
+        }
+    }
+    .node-type-webform section #confirmation-page .modal-dialog .modal-content .modal-header {
+        border:0;
+        }
+    .node-type-webform section #confirmation-page .modal-dialog .modal-content .modal-header button{
+        color:#ee352a;font-size:20px;opacity:1;background-color:transparent;margin:-5px;
+        }
+    .node-type-webform section #confirmation-page .modal-dialog .modal-content .modal-header button span{
+        background:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/ico-close-blue.png) no-repeat;width:25px;height:25px;display:block;text-indent:-9000px;
+        }
+    .node-type-webform section #confirmation-page .modal-dialog .modal-content .modal-body{
+        font-family:"DIN1451W01-Mittelschrif";font-style:normal;font-weight:normal;color:#274b72;text-align:center;padding:46px 0 82px 0;font-size:32px;
+        }
+    @media screen and (min-width:767px){
+        .node-type-webform section #confirmation-page .modal-dialog .modal-content .modal-body{
+        font-size:36px;
+        }
+    }
+    .node-type-webform section .region-content .node-webform .submitted{
+        display:none;
+        }
+    .node-type-webform section .region-content .node-webform .callout .callout-body p{
+        letter-spacing:-0.1px;
+        }
+    @media screen and (max-width:767px){
+        .node-type-webform section .region-content .node-webform .callout .callout-body p{
+        margin:0 0 3px;
+        }
+    }
+    .node-type-webform section .region-content .node-webform .divider {
+        color:#999999;font-size:12px;padding-bottom:14px;
+        }
+    .node-type-webform section .region-content .node-webform .webform-client-form .webform-component-textfield label{
+        font-family:arial;font-size:14px;font-weight:bold;color:#000000;text-transform:capitalize;
+        }
+    .node-type-webform section .region-content .node-webform .webform-client-form .webform-component-textfield label span{
+        float:left;
+        }
+    .node-type-webform section .region-content .node-webform .webform-client-form .webform-component-textfield input{
+        border-radius:0;border:1px solid #000000;margin-bottom:12px;
+        }
+    .node-type-webform section .region-content .node-webform .webform-client-form .webform-component-textfield input.error {
+        border:1px solid #ff0000;color:#ff0000;box-shadow:none;
+        }
+    .node-type-webform section .region-content .node-webform .webform-client-form .webform-component-textfield ::-webkit-input-placeholder {
+        color:#ff0000;
+        }
+    .node-type-webform section .region-content .node-webform .webform-client-form .webform-component-textfield :-moz-placeholder {
+        color:#ff0000;
+        }
+    .node-type-webform section .region-content .node-webform .webform-client-form .webform-component-textfield ::-moz-placeholder {
+        color:#909;
+        }
+    .node-type-webform section .region-content .node-webform .webform-client-form .webform-component-textfield :-ms-input-placeholder {
+        color:#ff0000;
+        }
+    .node-type-webform section .region-content .node-webform .webform-client-form .webform-component-checkboxes{
+        clear:both;margin-top:20px;
+        }
+    .node-type-webform section .region-content .node-webform .webform-client-form .webform-component-checkboxes label{
+        text-transform:uppercase;color:#000000;
+        }
+    .node-type-webform section .region-content .node-webform .webform-client-form .webform-component-checkboxes .icheckbox_square-red,.node-type-webform section .region-content .node-webform .webform-client-form .webform-component-checkboxes .iradio_square-red{
+        display:inline-block;*display:inline;vertical-align:middle;margin:0;padding:0;width:40px;height:29px;background:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/checkbox-mobile.jpg) no-repeat;border:none;cursor:pointer;
+        }
+    .node-type-webform section .region-content .node-webform .webform-client-form .webform-component-checkboxes .icheckbox_square-red{
+        background-position:0 0px;
+        }
+    .node-type-webform section .region-content .node-webform .webform-client-form .webform-component-checkboxes .icheckbox_square-red.hover {
+        background-position:0 0px;
+        }
+    .node-type-webform section .region-content .node-webform .webform-client-form .webform-component-checkboxes .icheckbox_square-red.checked{
+        background-position:0 -30px;
+        }
+    .node-type-webform section .region-content .node-webform .webform-client-form .webform-component-checkboxes .icheckbox_square-red.disabled{
+        background-position:-72px 0;cursor:default;
+        }
+    .node-type-webform section .region-content .node-webform .webform-client-form .webform-component-checkboxes .icheckbox_square-red.checked.disabled{
+        background-position:-96px 0;
+        }
+    .node-type-webform section .region-content .node-webform .webform-client-form .webform-component-checkboxes .form-checkboxes label{
+        text-transform:none;padding-left:0;
+        }
+    .node-type-webform section .region-content .node-webform .webform-client-form .webform-component-checkboxes .form-checkboxes .form-type-checkbox{
+        padding-left:0;
+        }
+    .node-type-webform section .region-content .node-webform .webform-client-form .webform-component-checkboxes .form-checkboxes .form-item-submitted-im-interested-in-3{
+        border-top:1px solid #e7e7e7;padding-top:12px;margin-top:12px;padding-bottom:12px;
+        }
+    .node-type-webform section .region-content .node-webform .webform-client-form .webform-component-checkboxes .form-checkboxes .form-item-submitted-im-interested-in-3 .icheckbox_square-red{
+        float:left;
+        }
+    .node-type-webform section .region-content .node-webform .webform-client-form .webform-component-checkboxes .form-checkboxes .form-item-submitted-im-interested-in-3 label{
+        display:table;
+        }
+    .node-type-webform section .region-content .node-webform .webform-client-form .webform-component-checkboxes .form-checkboxes .form-item-submitted-im-interested-in-3 label a{
+        color:#3a6592;
+        }
+    .node-type-webform section .region-content .node-webform .webform-client-form .captcha .g-recaptcha{
+        transform:scale(0.87);-webkit-transform:scale(0.87);transform-origin:0 0;-webkit-transform-origin:0 0;
+        }
+    @media screen and (max-width:767px){
+        .node-type-webform section .region-content .node-webform .webform-client-form .captcha .g-recaptcha{
+        position:relative;right:-43px;float:right;
+        }
+    }
+    .node-type-webform section .region-content .node-webform .webform-client-form button{
+        background-color:#002955;color:#ffffff;position:relative;text-decoration:none;width:100%;padding:5px;cursor:pointer;font-family:'dinlight';display:inherit;right:19px;float:right;width:95px;border:0;border-radius:0;padding:12px;margin-top:4px;text-transform:uppercase;
+        }
+    @media screen and (max-width:767px){
+        .node-type-webform section .region-content .node-webform .webform-client-form button{
+        clear:both;
+        }
+    }
+    .node-type-webform section .region-content .node-webform .webform-client-form button:hover,.node-type-webform section .region-content .node-webform .webform-client-form button:focus{
+        color:#ffffff;text-decoration:none;cursor:pointer;
+        }
+    .node-type-webform section .region-content .node-webform .webform-client-form button:after {
+        background-color:#3a6592;content:"";background-image:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/arrow-button-blue.png);background-position:0;background-repeat:no-repeat;right:-20px;top:0;position:absolute;text-align:center;display:block;width:20px;height:100%;
+        }
+    @media (max-width:768px){
+        .ipad .node-type-webform section .region-content .node-webform .webform-client-form .webform-component-textfield label{
+        width:initial;
+        }
+    .ipad .node-type-webform section .region-content .node-webform .webform-client-form .webform-component-textfield input{
+        width:100%;margin-bottom:initial;
+        }
+    .ipad .node-type-webform section .region-content .node-webform .webform-client-form .webform-component-textfield.webform-component--last-name,.ipad .node-type-webform section .region-content .node-webform .webform-client-form .webform-component-textfield.webform-component--phone-number {
+        float:none;margin-bottom:initial;
+        }
+    .ipad .node-type-webform section .region-content .node-webform .webform-client-form .webform-component-checkboxes{
+        padding-top:25px;
+        }
+    .ipad .node-type-webform section .region-content .node-webform .webform-client-form .webform-component-checkboxes label{
+        padding-left:initial;
+        }
+    .ipad .node-type-webform section .region-content .node-webform .webform-client-form .webform-component-checkboxes .form-checkboxes .checkbox{
+        padding-left:initial;display:block;
+        }
+    .ipad .node-type-webform section .region-content .node-webform .webform-client-form .webform-component-checkboxes .form-checkboxes .checkbox .form-item-submitted-im-interested-in-1,.ipad .node-type-webform section .region-content .node-webform .webform-client-form .webform-component-checkboxes .form-checkboxes .checkbox .form-item-submitted-im-interested-in-2{
+        padding-left:initial;
+        }
+    .ipad .node-type-webform section .region-content .node-webform .webform-client-form .webform-component-checkboxes .icheckbox_square-red,.ipad .node-type-webform section .region-content .node-webform .webform-client-form .webform-component-checkboxes .iradio_square-red{
+        display:inline-block;*display:inline;vertical-align:middle;margin:0;padding:0;width:40px;height:29px;background:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/checkbox-mobile.jpg) no-repeat;border:none;cursor:pointer;
+        }
+    .ipad .node-type-webform section .region-content .node-webform .webform-client-form .webform-component-checkboxes .icheckbox_square-red{
+        background-position:0 0px;
+        }
+    .ipad .node-type-webform section .region-content .node-webform .webform-client-form .webform-component-checkboxes .icheckbox_square-red.hover {
+        background-position:0 0px;
+        }
+    .ipad .node-type-webform section .region-content .node-webform .webform-client-form .webform-component-checkboxes .icheckbox_square-red.checked{
+        background-position:0 -30px;
+        }
+    .ipad .node-type-webform section .region-content .node-webform .webform-client-form .captcha .g-recaptcha{
+        transform:scale(0.87);-webkit-transform:scale(0.87);transform-origin:0 0;-webkit-transform-origin:0 0;position:relative;right:-43px;float:right;
+        }
+    .ipad .node-type-webform section .region-content .node-webform .webform-client-form button{
+        clear:both;
+        }
+    }
+    .ordering .webform-client-form input::-moz-placeholder {
+        color:red !important;
+        }
+    .ordering .webform-client-form input:-moz-placeholder {
+        color:red !important;
+        }
+    .ordering a.pfizermed-link{
+        color:#3a6592;text-decoration:underline;
+        }
+    @media (max-width:768px){
+        .ipad .webform-client-form .webform-component--e-mail-address{
+        width:100% !important;
+        }
+    .ipad .webform-client-form .webform-component--e-mail-address label.error {
+        margin-left:0 !important;
+        }
+    }
+    .divider .divider-please-note::after {
+        content:'';display:block;clear:both;
+        }
+    .divider .divider-please-note strong{
+        font-size:14px;color:black;padding:0 !important;letter-spacing:-.1px;
+        }
+    @media (max-width:768px){
+        .divider .divider-please-note strong{
+        margin-bottom:12px;
+        }
+    }
+    @media screen and (min-width:767px){
+        .node-type-webform section .region-content .node-webform .form-group{
+        margin-bottom:0;
+        }
+    .node-type-webform section .region-content .node-webform .callout .callout-body{
+        padding:16px 0;
+        }
+    .node-type-webform section .region-content .node-webform .divider {
+        border-top:1px solid #cccccc;padding:14px 0;margin-top:8px;
+        }
+    .node-type-webform section .region-content .node-webform .webform-client-form .webform-component--e-mail-address{
+        float:left;
+        }
+    .node-type-webform section .region-content .node-webform .webform-client-form .webform-component--e-mail-address input{
+        margin-bottom:0;
+        }
+    .node-type-webform section .region-content .node-webform .webform-client-form .webform-component--e-mail-address label.error {
+        clear:both;float:left;width:309px;margin-left:136px;margin-right:0;font-weight:normal;color:red;font-size:11px;
+        }
+    .node-type-webform section .region-content .node-webform .webform-client-form .webform-component-textfield label{
+        float:left;width:121px;padding-top:5px;
+        }
+    .node-type-webform section .region-content .node-webform .webform-client-form .webform-component-textfield input{
+        float:left;width:310px;margin-bottom:32px;
+        }
+    .node-type-webform section .region-content .node-webform .webform-client-form .webform-component-textfield.webform-component--last-name,.node-type-webform section .region-content .node-webform .webform-client-form .webform-component-textfield.webform-component--phone-number {
+        float:right;
+        }
+    .node-type-webform section .region-content .node-webform .webform-client-form .webform-component-textfield.webform-component--e-mail-address{
+        clear:both;
+        }
+    .node-type-webform section .region-content .node-webform .webform-client-form .webform-component-checkboxes{
+        padding-top:5px;
+        }
+    .node-type-webform section .region-content .node-webform .webform-client-form .webform-component-checkboxes label{
+        padding-left:120px;
+        }
+    .node-type-webform section .region-content .node-webform .webform-client-form .webform-component-checkboxes .icheckbox_square-red,.node-type-webform section .region-content .node-webform .webform-client-form .webform-component-checkboxes .iradio_square-red{
+        width:22px;height:15px;background:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/checkbox-desk.jpg) no-repeat;padding-right:26px;
+        }
+    .node-type-webform section .region-content .node-webform .webform-client-form .webform-component-checkboxes .icheckbox_square-red.checked{
+        background-position:0 -15px;
+        }
+    .node-type-webform section .region-content .node-webform .webform-client-form .webform-component-checkboxes .form-checkboxes .checkbox{
+        padding-left:120px;display:inline-block;
+        }
+    .node-type-webform section .region-content .node-webform .webform-client-form .webform-component-checkboxes .form-checkboxes .form-item-submitted-im-interested-in-1,.node-type-webform section .region-content .node-webform .webform-client-form .webform-component-checkboxes .form-checkboxes .form-item-submitted-im-interested-in-2{
+        padding-left:28px;
+        }
+    .node-type-webform section .region-content .node-webform .webform-client-form .webform-component-checkboxes .form-checkboxes .form-item-submitted-im-interested-in-3{
+        border-top:1px solid #cccccc;padding-top:17px;display:block;
+        }
+    .node-type-webform section .region-content .node-webform .webform-client-form .webform-component-checkboxes .form-checkboxes .form-item-submitted-im-interested-in-3 label{
+        width:410px;display:block;
+        }
+    .node-type-webform section .region-content .node-webform .webform-client-form .webform-component-checkboxes .form-checkboxes .form-item-submitted-im-interested-in-3 label a{
+        position:absolute;font-size:12px;margin-left:2px;margin-top:3px;
+        }
+    .node-type-webform section .region-content .node-webform .webform-client-form .captcha .g-recaptcha{
+        transform:scale(0.57);-webkit-transform:scale(0.57);-ms-transform:scale(0.57);float:left;transform-origin:0 0;-webkit-transform-origin:0 0;position:absolute;right:17px;
+        }
+    .node-type-webform section .region-content .node-webform .webform-client-form button{
+        margin-top:0;
+        }
+    }
+    #site-map .site-map-box ul:first-child{
+        padding-left:0;margin-top:21px;
+        }
+    ul.site-map-menu{
+        margin:0;padding:0;
+        }
+    ul.site-map-menu li{
+        line-height:15px;padding-bottom:20px;
+        }
+    @media screen and (min-width:767px){
+        ul.site-map-menu li{
+        line-height:18px;padding-bottom:20px;
+        }
+    }
+    ul.site-map-menu li a{
+        font-size:12px;color:#3a6592;text-decoration:underline;
+        }
+    @media screen and (min-width:767px){
+        ul.site-map-menu li a{
+        font-size:14px;
+        }
+    }
+    ul.site-map-menu li ul{
+        padding-top:14px;padding-left:18px;
+        }
+    @media screen and (min-width:767px){
+        ul.site-map-menu li ul{
+        padding-top:17px;padding-left:36px;
+        }
+    }
+    ul.site-map-menu li ul li{
+        padding-bottom:13px;
+        }
+    @media screen and (min-width:767px){
+        ul.site-map-menu li ul li{
+        padding-bottom:13px;padding-left:15px;
+        }
+    }
+    ul.site-map-menu li ul li.last{
+        padding:0;
+        }
+    @media screen and (min-width:767px){
+        ul.site-map-menu li ul li.last{
+        padding:0 15px 0;
+        }
+    }
+    @media screen and (max-width:767px){
+        .non-us .callout .callout-header {
+        background:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/phone-inverse-mobile-footer.png) no-repeat;font-size:13px;
+        }
+    .non-us .callout .callout-header .phone-number,.non-us .callout .callout-header .phone-number:hover {
+        text-decoration:underline;
+        }
+    }
+    .non-us .callout .callout-body{
+        padding-bottom:55px;
+        }
+    .non-us a.pfizermed-link{
+        color:#3a6592;text-decoration:underline;
+        }
+    @media screen and (min-width:767px){
+        .non-us .callout .callout-header {
+        background:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/phone-inverse-big.png) no-repeat;float:left;width:525px;
+        }
+    .non-us .callout .callout-body{
+        float:left;width:415px;padding-right:55px;letter-spacing:-0.4px;
+        }
+    .non-us a.pfizermed-link{
+        color:#3a6592;text-decoration:underline;
+        }
+    }
+    .resources .node p:first-child{
+        margin:20px 0;
+        }
+    .resources .node ul{
+        margin-bottom:30px;list-style:none;
+        }
+    .resources .node ul li{
+        padding-left:1em;text-indent:-1.7em;margin-bottom:10px;
+        }
+    .resources .node ul li:before{
+        content:"â€¢ ";color:#405d7e;
+        }
+    .resources .node ul a{
+        color:inherit;
+        }
+    .resources .read-more-content .button-blue{
+        margin-top:1px;
+        }
+    .resources h3.title-description{
+        float:left;width:275px;
+        }
+    .resources .contact-meridian{
+        margin-top:20px;
+        }
+    .resources .contact-meridian a{
+        display:inline-block;padding:16px 0;color:#3a6592;text-decoration:underline;
+        }
+    .resources .phone-icon{
+        background:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/phone.png) no-repeat center;height:52px;width:75px;float:left;display:block;
+        }
+    .resources .footnote{
+        font-size:12.2px;
+        }
+    .resources .button-blue{
+        float:left;width:auto;padding:5px 20px;text-transform:uppercase;font-size:18px;font-weight:bold;margin:0;
+        }
+    .resources .button-blue.right{
+        margin:0;
+        }
+    @media screen and (max-width:767px){
+        .resources .button-blue{
+        font-size:14px;padding:5px 15px;
+        }
+    }
+    @media (min-width:992px){
+        .resources .read-more-content .button-blue{
+        margin-top:15px;
+        }
+    .resources .node .grant-information-block,.resources .node .free-disposal-block{
+        width:81%;
+        }
+    .resources .button-blue.right{
+        margin:0 25px;
+        }
+    .resources .col-md-5{
+        width:39.9%;
+        }
+    .resources .col-md-7{
+        width:59%;
+        }
+    .resources .contact-meridian a{
+        display:inline-flex;
+        }
+    }
+    @media screen and (min-width:767px) and (orientation:landscape){
+        .ipad .products-atnaa .product-callouts .product-footnote{
+        height:100px;
+        }
+    }
+    .node-type-productsall .content-full p.indication-pi-link{
+        display:none;
+        }
+    .node-type-productsall .content-full .isi-overlay p.indication-pi-link{
+        display:block !important;
+        }
+    .node-type-productsall{
+        color:#000000;
+        }
+    .node-type-productsall .region_menu_products{
+        margin-bottom:20px;
+        }
+    .node-type-productsall .region_menu_products .block-title{
+        display:none;
+        }
+    .node-type-productsall .region_menu_products ul.menu{
+        margin-left:-8px;width:300px;
+        }
+    .node-type-productsall .region_menu_products ul.menu li{
+        float:left;border-right:1px solid #002955;margin-bottom:5px;
+        }
+    .node-type-productsall .region_menu_products ul.menu li:last-child{
+        border-right:transparent;
+        }
+    .node-type-productsall .region_menu_products ul.menu li:nth-child(2){
+        border-right:transparent;
+        }
+    .node-type-productsall .region_menu_products ul.menu li a{
+        padding:0 7px;font-size:12px;line-height:7px;color:#2f5b8a;text-decoration:underline;margin-bottom:3px;
+        }
+    .node-type-productsall .region_menu_products ul.menu li a:hover {
+        text-decoration:underline;background:transparent;
+        }
+    .node-type-productsall .region_menu_products ul.menu li a.active{
+        background:transparent;
+        }
+    @media screen and (min-width:767px){
+        .node-type-productsall.products-duodote hgroup h1,.node-type-productsall.products-duodote hgroup h2{
+        margin:0;padding:0;display:inline-block;width:100%;
+        }
+    }
+    @media screen and (min-width:767px){
+        .node-type-productsall.products-duodote hgroup h2{
+        white-space:normal;
+        }
+    }
+    @media (max-width:768px){
+        .node-type-productsall hgroup{
+        border:0;
+        }
+    }
+    .node-type-productsall hgroup h1,.node-type-productsall hgroup h2{
+        font-family:'dinregular';color:#274b72;border:0;
+        }
+    .node-type-productsall hgroup h1{
+        font-size:21px;
+        }
+    .node-type-productsall hgroup h2{
+        font-size:15px;white-space:nowrap;color:#405d7e;
+        }
+    .node-type-productsall .region-content .col-xs-12{
+        padding:0;font-size:14px;line-height:15px;
+        }
+    .node-type-productsall .region-content .field-name-field-product-image-desktop{
+        display:none;color:#274b72;
+        }
+    .node-type-productsall .region-content .product-footer_image_deskt{
+        display:none;
+        }
+    .node-type-productsall .region-content .content-left{
+        padding:0;
+        }
+    .node-type-productsall .region-content .product-body{
+        line-height:16.5px;
+        }
+    .node-type-productsall .region-content .product-body a:not(.phone-number){
+        text-decoration:underline;color:#000000;
+        }
+    .node-type-productsall .region-content .product-body a.links-blue{
+        text-decoration:underline;color:#3a6592;
+        }
+    .node-type-productsall .region-content .product-mobile-image .field-label{
+        display:none;
+        }
+    .node-type-productsall .region-content .product-indication{
+        margin-top:28px;line-height:16.5px;width:95%;
+        }
+    .node-type-productsall .region-content .product-indication strong{
+        float:left;padding-right:5px;
+        }
+    .node-type-productsall .region-content .product-indication .field-label{
+        display:none;
+        }
+    .node-type-productsall .region-content .product-quick-information{
+        float:left;margin-top:11px;line-height:16px;
+        }
+    .node-type-productsall .region-content .product-quick-information .field-label{
+        display:none;
+        }
+    .node-type-productsall .region-content .product-especification .field-label{
+        display:none;
+        }
+    .node-type-productsall .region-content .product-especification .telephone-background-products{
+        float:right;background-image:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/produtcts-telephone-mobile.png);font-size:14px;padding:10px 40px 15px 70px;width:300px;font-weight:bold;
+        }
+    .node-type-productsall .region-content .product-especification .telephone-background-products.no-tel{
+        background-image:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/produtcts-no-telephone-mobile.png);min-height:55px;
+        }
+    .node-type-productsall .region-content .product-especification .telephone-background-products.no-tel .tel-content{
+        display:none;
+        }
+    @media (max-width:768px){
+        .node-type-productsall .region-content .product-especification .telephone-background-products{
+        margin-top:26px;
+        }
+    }
+    .node-type-productsall .region-content .product-especification .telephone-background-products a{
+        text-decoration:underline;color:#ffffff;
+        }
+    .node-type-productsall .region-content .product-especification .table{
+        margin-top:20px;float:left;box-shadow:none;
+        }
+    .node-type-productsall .region-content .product-especification .table thead th{
+        font-size:15px;font-family:'dinregular';color:#274b72;text-transform:uppercase;padding-left:0;
+        }
+    .node-type-productsall .region-content .product-especification .table thead th a{
+        text-decoration:underline;color:#274b72;
+        }
+    .node-type-productsall .region-content .product-especification .table tbody{
+        -webkit-box-shadow:-1px 2px 4px -2px rgba(204,204,204,0.93);-moz-box-shadow:-1px 2px 4px -2px rgba(204,204,204,0.93);box-shadow:-1px 2px 4px -2px rgba(204,204,204,0.93);border:1px solid #eeeeee;display:table;
+        }
+    .node-type-productsall .region-content .product-especification .table tbody td{
+        font-size:12px;
+        }
+    .node-type-productsall .region-content .product-especification .table tbody td ul{
+        margin-left:-23px;
+        }
+    .node-type-productsall .region-content .product-especification .table tbody .row-darker-blue,.node-type-productsall .region-content .product-especification .table tbody .row-dark-blue{
+        padding-left:15px;padding-right:15px;font-weight:bold;
+        }
+    .node-type-productsall .region-content .for-medical{
+        width:100%;line-height:16px;font-size:13.5px;float:left;
+        }
+    .node-type-productsall .region-content .for-medical .product-footnote{
+        display:none;
+        }
+    @media screen and (max-width:767px){
+        .node-type-productsall .region-content .for-medical{
+        margin-bottom:10px;
+        }
+    }
+    .node-type-productsall .region-content .for-medical .field-label{
+        display:none;
+        }
+    .node-type-productsall .region-content .for-medical a:link{
+        color:#000000;text-decoration:underline;white-space:nowrap;
+        }
+    .node-type-productsall .region-content .for-medical a:hover,.node-type-productsall .region-content .for-medical a:active,.node-type-productsall .region-content .for-medical a:focus{
+        color:#000000;
+        }
+    .node-type-productsall .region-content .for-medical .phone-number {
+        white-space:pre;
+        }
+    .node-type-productsall .region-content .for-medical .font-weight-initial{
+        font-weight:initial;
+        }
+    .node-type-productsall .region-content .product-trademark .field-label{
+        display:none;
+        }
+    .node-type-productsall .region-content .product-trademark .product-callouts{
+        float:left;
+        }
+    .node-type-productsall .region-content .product-trademark .product-callouts .button-white{
+        float:left;width:100%;margin-top:15px;padding-left:38px;font-family:'dinmedium';border-top:1px solid #eeeeee;
+        }
+    .node-type-productsall .region-content .product-trademark .product-callouts .button-white:before{
+        width:28px;
+        }
+    .node-type-productsall .region-content .product-trademark .product-callouts .button-white:after {
+        width:29px;background-image:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/arrow-button-mobile-white.png);background-repeat:no-repeat;background-position:2px;
+        }
+    .node-type-productsall .region-content .product-trademark .product-callouts .button-white:focus{
+        color:initial;text-decoration:none;
+        }
+    .node-type-productsall .region-content .product-trademark .product-callouts .button-white:first-child{
+        font-size:12px;
+        }
+    .node-type-productsall .region-content .product-trademark .product-callouts .product-footnote{
+        float:left;font-size:9px;margin-top:20px;
+        }
+    .node-type-productsall .region-content .next-product{
+        float:right;margin-right:17px;margin-left:15px;margin-bottom:15px;
+        }
+    @media screen and (max-width:767px){
+        .node-type-productsall .region-content .next-product{
+        margin-right:0 !important;
+        }
+    }
+    .node-type-productsall .region-content .next-product .button-blue{
+        padding:10px 10px 10px;font-size:18px;width:94px;height:51px;float:left;text-align:center;text-indent:-800000px;outline:none;
+        }
+    .node-type-productsall .region-content .next-product a:after {
+        display:none;
+        }
+    .node-type-productsall .region-content .next-product .button-null{
+        background:#fff;cursor:initial;
+        }
+    .node-type-productsall .region-content .next-product .button-null + .button-next{
+        background-position-x:-95px !important;
+        }
+    .node-type-productsall .region-content .next-product .button-prev{
+        background:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/button-navigation-prev-products-details.png) no-repeat 0 0;
+        }
+    .node-type-productsall .region-content .next-product .button-prev:hover {
+        background:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/button-navigation-prev-products-details.png) no-repeat 0 -51px;
+        }
+    .node-type-productsall .region-content .next-product .button-next{
+        background:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/button-navigation-products-details.png) no-repeat -93px 0 !important;
+        }
+    .node-type-productsall .region-content .next-product .button-next:hover {
+        background:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/button-navigation-products-details.png) no-repeat -93px -51px !important;
+        }
+    .node-type-productsall .region-content .next-product .field-label{
+        display:none;
+        }
+    @media screen and (max-width:767px){
+        .products-cyanokit hgroup h2,.products-atnaa hgroup h2,.products-duodote hgroup h2{
+        white-space:normal;
+        }
+    }
+    @media screen and (max-width:767px){
+        .products-atnaa .content-left .product-mobile-image{
+        margin-top:-130px !important;padding-bottom:12px;
+        }
+    }
+    .products-atnaa .content-left .product-especification table sup{
+        top:-.4em;
+        }
+    @media (min-width:769px){
+        .products-atnaa .content-right{
+        min-height:895px;
+        }
+    }
+    .products-diazepam .region-content .product-indication p:first-child{
+        width:80%;
+        }
+    @media (min-width:320px) and (max-width:550px){
+        hgroup{
+        width:72%;
+        }
+    .node-type-productsall .region-content .product-mobile-image{
+        margin-top:-88px !important;
+        }
+    }
+    @media only screen and (min-device-width:768px) and (max-device-width:1024px) and (orientation:portrait){
+        .product-especification{
+        float:left;margin-top:-90px !important;
+        }
+    .node-type-productsall .region-content .product-mobile-image{
+        margin-top:-48px !important;
+        }
+    }
+    @media only screen and (min-device-width :360px) and (max-device-width :667px) and (orientation:landscape){
+        .node-type-productsall .region-content .product-mobile-image{
+        position:relative;top:50px;
+        }
+    }
+    @media screen and (min-width:767px){
+        .node-type-productsall.products-atnaa .region-content .next-product .button-next{
+        background:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/button-navigation-products-details.png) no-repeat -95px 0 !important;
+        }
+    .node-type-productsall.products-atnaa .region-content .next-product .button-next:hover {
+        background:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/button-navigation-products-details.png) no-repeat -95px -51px !important;
+        }
+    .node-type-productsall .region_menu_products{
+        margin-bottom:12px;
+        }
+    .node-type-productsall .region_menu_products ul.menu{
+        margin-left:0;width:100%;
+        }
+    .node-type-productsall .region_menu_products ul.menu li:first-child{
+        display:none;
+        }
+    .node-type-productsall .region_menu_products ul.menu li:nth-child(2){
+        border-right:1px solid #002955;
+        }
+    .node-type-productsall hgroup{
+        padding-bottom:6px;margin-bottom:10px;
+        }
+    .node-type-productsall hgroup h1{
+        font-size:30px;
+        }
+    .node-type-productsall hgroup h2{
+        font-size:26px;
+        }
+    .node-type-productsall .region-content{
+        margin-bottom:28px;
+        }
+    .node-type-productsall .region-content .field-name-field-product-image-desktop{
+        display:block;
+        }
+    .node-type-productsall .region-content .field-name-field-product-image-desktop img{
+        display:inline-block;
+        }
+    .node-type-productsall .region-content .product-footer_image_deskt{
+        width:100%;text-align:center;display:table;padding-top:20px;
+        }
+    .node-type-productsall .region-content .product-footer_image_deskt img{
+        display:inline-block;
+        }
+    .node-type-productsall .region-content .content-left{
+        width:660px;
+        }
+    .node-type-productsall .region-content .product-mobile-image{
+        display:none;
+        }
+    .node-type-productsall .region-content .content-right{
+        width:270px;
+        }
+    .node-type-productsall .region-content .content-right .product-desktop-image{
+        margin-top:40px;width:190px;margin-left:39px;
+        }
+    .node-type-productsall .region-content .content-right .product-desktop-image .field-name-field-product-image-desktop{
+        width:100%;text-align:center;
+        }
+    .node-type-productsall .region-content .content-right .product-desktop-image .field-name-field-product-image-desktop .field-label{
+        display:none;
+        }
+    .node-type-productsall .region-content .product-footer_image_deskt .field-label{
+        display:none;
+        }
+    .node-type-productsall .region-content .product-indication{
+        margin-top:20px;width:100%;
+        }
+    .node-type-productsall .region-content .product-quick-information{
+        margin-bottom:31px;
+        }
+    .node-type-productsall .region-content .product-especification{
+        float:left;margin-top:-48px;
+        }
+    .node-type-productsall .region-content .product-especification .telephone-background-products{
+        background-image:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/produtcts-telephone.png);font-size:18px;padding:10px 40px 15px 77px;width:370px;height:75px;position:relative;right:-4px;top:63px;line-height:155%;
+        }
+    .node-type-productsall .region-content .product-especification .telephone-background-products.no-tel{
+        background-image:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/produtcts-no-telephone.png);min-height:75px;
+        }
+    .node-type-productsall .region-content .product-especification .telephone-background-products.no-tel .tel-content{
+        display:none;
+        }
+    .node-type-productsall .region-content .product-especification .telephone-background-products .telephone-number {
+        font-size:26px;
+        }
+    .node-type-productsall .region-content .product-especification .telephone-background-products a{
+        text-decoration:none;color:#ffffff;cursor:text;
+        }
+    .node-type-productsall .region-content .product-especification .table thead th{
+        font-size:17.9px;
+        }
+    .node-type-productsall .region-content .product-especification .table tbody{
+        -webkit-box-shadow:1px 2px 4px 0px rgba(204,204,204,0.93);-moz-box-shadow:1px 2px 4px 0px rgba(204,204,204,0.93);box-shadow:1px 2px 4px 0px rgba(204,204,204,0.93);
+        }
+    .node-type-productsall .region-content .product-especification .table tbody td{
+        line-height:16px;font-size:14px;
+        }
+    .node-type-productsall .region-content .product-especification .table tbody .row-darker-blue,.node-type-productsall .region-content .product-especification .table tbody .row-dark-blue{
+        padding-left:15px;padding-right:15px;font-weight:bold;width:290px;
+        }
+    .node-type-productsall .region-content .for-medical{
+        font-size:14px;
+        }
+    .node-type-productsall .region-content .for-medical a{
+        color:#000000;text-decoration:none;cursor:text;
+        }
+    .node-type-productsall .region-content .for-medical a.pfizermed-link{
+        color:#3a6592;text-decoration:underline;cursor:pointer;
+        }
+    .node-type-productsall .region-content .product-trademark .product-callouts{
+        margin-left:52px;
+        }
+    .node-type-productsall .region-content .product-trademark .product-callouts .button-white{
+        width:186px;margin-top:15px;padding-left:28px;
+        }
+    .node-type-productsall .region-content .product-trademark .product-callouts .button-white:before{
+        width:18px;
+        }
+    .node-type-productsall .region-content .product-trademark .product-callouts .button-white:after {
+        width:19px;background-image:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/arrow-button-white.png);
+        }
+    .node-type-productsall .region-content .product-trademark .product-callouts .button-white:first-child{
+        font-size:13px;margin-top:25px;
+        }
+    .node-type-productsall .region-content .product-trademark .product-callouts .product-footnote{
+        font-size:12px;width:186px;font-weight:normal;
+        }
+    .node-type-productsall .region-content .next-product{
+        position:absolute;bottom:0;right:29px;margin:0;
+        }
+    .node-type-productsall .region-content .next-product a:after {
+        display:none;
+        }
+    .node-type-productsall .region-content .next-product .button-blue{
+        padding:10px 10px 10px;font-size:18px;width:94px;height:51px;float:left;text-align:center;text-indent:-800000px;
+        }
+    .node-type-productsall .region-content .next-product .button-null{
+        background:#fff;cursor:initial;
+        }
+    .node-type-productsall .region-content .next-product .button-prev{
+        background:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/button-navigation-prev-products-details.png) no-repeat 0 0;
+        }
+    .node-type-productsall .region-content .next-product .button-prev:hover {
+        background:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/button-navigation-prev-products-details.png) no-repeat 0 -51px;
+        }
+    .node-type-productsall .region-content .next-product .button-next{
+        background:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/button-navigation-products-details.png) no-repeat -93px 0 !important;
+        }
+    .node-type-productsall .region-content .next-product .button-next:hover {
+        background:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/button-navigation-products-details.png) no-repeat -93px -51px !important;
+        }
+    .node-type-productsall.products-atnaa .region-content .content-right .product-desktop-image{
+        margin-top:-20px;
+        }
+    .node-type-productsall.products-atnaa .region-content .content-right .product-desktop-image img{
+        width:70px;
+        }
+    .node-type-productsall.products-cyanokit .region-content .content-right .product-desktop-image{
+        margin-top:27px;width:100%;margin-left:0;
+        }
+    .node-type-productsall.products-cyanokit .region-content .content-right .product-desktop-image img{
+        width:131px;
+        }
+    .node-type-productsall.products-cyanokit .region-content .content-right .product-footer_image_deskt{
+        padding-top:40px;
+        }
+    .node-type-productsall.products-cyanokit .region-content .content-right .product-footer_image_deskt img{
+        width:165px;margin-left:10px;
+        }
+    .node-type-productsall.products-duodote .region-content .content-right .product-desktop-image{
+        width:100%;margin-left:0;margin-top:20px;
+        }
+    .node-type-productsall.products-duodote .region-content .content-right .product-desktop-image img{
+        width:52px;
+        }
+    .node-type-productsall.products-seizalam .region-content .content-right .product-desktop-image{
+        width:100%;margin-top:241px;margin-left:0;
+        }
+    .node-type-productsall.products-seizalam .region-content .content-right .product-desktop-image img{
+        width:115px;
+        }
+    .ie9 .products #carousel .productsall-slider-action-buttons a{
+        filter:none;
+        }
+    .ie9 .region-content .product-especification .table tbody,.ie10 .region-content .product-especification .table tbody,.ie11 .region-content .product-especification .table tbody{
+        box-shadow:1px 0px 6px 0px rgba(204,204,204,0.93);border-collapse:separate;
+        }
+    }
+    @media (min-width:768px) and (max-width:991px){
+        .node-type-productsall.products-seizalam .region-content .product-mobile-image{
+        margin-top:-15px !important;padding-bottom:0;
+        }
+    }
+    @media (max-width:767px){
+        .node-type-productsall.products-atnaa .region-content .content-left .product-mobile-image{
+        margin-top:-170px !important;margin-left:-15px;margin-right:-40px;
+        }
+    .node-type-productsall.products-atnaa .region-content .content-left .product-mobile-image img{
+        width:45px;
+        }
+    .node-type-productsall.products-duodote .region-content .content-left .product-mobile-image{
+        margin-top:-120px !important;margin-bottom:-20px;margin-right:0;margin-left:-10px;
+        }
+    .node-type-productsall.products-duodote .region-content .content-left .product-mobile-image img{
+        width:30px;float:right;
+        }
+    .node-type-productsall.products-seizalam hgroup{
+        width:90% !important;
+        }
+    .node-type-productsall.products-seizalam .region-content .content-left .product-mobile-image{
+        margin-top:-30px !important;margin-left:0px;margin-right:-9px;padding-bottom:0;margin-bottom:-25px;
+        }
+    .node-type-productsall.products-seizalam .region-content .content-left .product-mobile-image img{
+        width:85px;float:right;
+        }
+    .node-type-productsall.products-cyanokit .region-content .content-left .product-mobile-image{
+        margin-top:-70px !important;margin-right:-7px;
+        }
+    }
+    @media (max-width:374px){
+        .node-type-productsall.products-cyanokit .region-content .content-left .product-mobile-image{
+        margin-top:-85px !important;
+        }
+    .node-type-productsall.products-seizalam .region-content .content-left .product-mobile-image{
+        margin-top:0 !important;
+        }
+    }
+    @media (max-width:768px){
+        .products-cyanokit .product-footer_image_deskt{
+        margin-top:20px;
+        }
+    .node-type-productsall hgroup h2{
+        margin:0 0 23px 0;
+        }
+    .node-type-productsall .region-content .content-left{
+        width:100%;
+        }
+    .node-type-productsall .region-content .product-especification{
+        margin-top:0;
+        }
+    .node-type-productsall .region-content .product-especification .table{
+        max-width:100%;
+        }
+    .node-type-productsall .region-content .product-especification .table .row-darker-blue{
+        background-size:contain;
+        }
+    .node-type-productsall .region-content .product-mobile-image{
+        display:block;width:100px;margin-top:-72px;margin-left:15px;text-align:center;float:right;padding-bottom:22px;
+        }
+    .node-type-productsall .region-content .product-mobile-image img{
+        display:inline-block;
+        }
+    .node-type-productsall .content-right{
+        width:100% !important;
+        }
+    .node-type-productsall .content-right .product-desktop-image{
+        display:none;
+        }
+    .node-type-productsall .content-right .product-trademark .product-callouts{
+        margin-left:0;
+        }
+    .node-type-productsall .content-right .product-trademark .product-callouts a{
+        width:100%;
+        }
+    .node-type-productsall .content-right .product-trademark .product-callouts a.button-white{
+        width:100%;
+        }
+    .node-type-productsall .content-right .product-trademark .product-callouts .product-footnote{
+        width:100%;margin-bottom:0px;
+        }
+    .node-type-productsall .content-right .next-product{
+        margin-right:17px;margin-top:24px;position:relative;right:0;
+        }
+    }
+    @media screen and (max-width:768px){
+        .products-atropen .product-footer_image_deskt{
+        display:none !important;
+        }
+    }
+    .ipad .products .ipad-isi-content{
+        position:fixed !important;
+        }
+    .node-type-productsall .isi.fixed{
+        z-index:1020;
+        }
+    @media (min-width:768px){
+        .all-page-products .productsall-full-isi{
+        min-height:20vh;
+        }
+    }
+    .all-page-products .productsall-full-isi .isi{
+        z-index:1020;
+        }
+    .all-page-products .region-slider-products{
+        background:#fff;
+        }
+    @media (max-width:766px){
+        .all-page-products .productsall-slider-top{
+        padding-bottom:0 !important;
+        }
+    .all-page-products .productsall-slider-top .title-indication{
+        float:left !important;margin-bottom:0 !important;
+        }
+    .all-page-products .productsall-slider-top .productsall-field_for_medical{
+        padding-bottom:25px;
+        }
+    .all-page-products .productsall-full-isi .isi{
+        display:block;
+        }
+    .all-page-products .productsall-inset-isi{
+        height:1px;
+        }
+    .all-page-products .content-full-footer {
+        position:relative;
+        }
+    .all-page-products .content-full-footer .footer {
+        margin-top:-5px;
+        }
+    }
+    .productsall-slider-top .invisible-productsall-slider {
+        display:none !important;
+        }
+    @media screen and (min-width:767px){
+        .products .carousel-fade .carousel-indicators{
+        position:inherit;
+        }
+    .products .carousel-fade .carousel-indicators li{
+        border:#000;background-color:grey;
+        }
+    .products .carousel-fade .carousel-indicators li.active{
+        border:#000;background-color:blue;
+        }
+    .products .carousel-fade .carousel-inner .item{
+        transition-property:opacity;
+        }
+    .products .carousel-fade .carousel-inner .item,.products .carousel-fade .carousel-inner .active.left,.products .carousel-fade .carousel-inner .active.right{
+        opacity:0;
+        }
+    .products .carousel-fade .carousel-inner .active,.products .carousel-fade .carousel-inner .next.left,.products .carousel-fade .carousel-inner .prev.right{
+        opacity:1;
+        }
+    .products .carousel-fade .carousel-inner .next,.products .carousel-fade .carousel-inner .prev,.products .carousel-fade .carousel-inner .active.left,.products .carousel-fade .carousel-inner .active.right{
+        left:0;transform:translate3d(0,0,0);
+        }
+    .products .carousel-fade .carousel-control{
+        z-index:2;position:left;
+        }
+    .products .carousel-fade .carousel-control .right{
+        right:0;
+        }
+    .products .carousel,.products .carousel-inner,.products .carousel-inner .item{
+        height:100%;
+        }
+    }
+    .glyphicon-triangle-top:before{
+        -moz-transition:transform 0.5s;-webkit-transition:transform 0.5s;transition:transform 0.5s;content:none;
+        }
+    .isi{
+        border-top:1px solid #eee;font-size:14px;line-height:16px;background-color:#ffffff;-webkit-box-shadow:0px -4px 7px rgba(220,220,220,0.75);-moz-box-shadow:0px -4px 7px rgba(220,220,220,0.75);box-shadow:0px -4px 7px rgba(220,220,220,0.75);max-width:100%;
+        }
+    .isi .invisible-isi{
+        display:none;
+        }
+    .isi.fixed{
+        -webkit-transition:height 0.5s;-moz-transition:height 0.5s;transition:height 0.5s;position:fixed;height:20vh;
+        }
+    .isi.fixed .glyphicon-triangle-top:before{
+        content:"\e253";
+        }
+    .isi.fixed .isi-content{
+        max-width:925px;padding-bottom:10px;margin:0 auto;height:14vh;
+        }
+    .isi.fixed.open{
+        height:80vh;
+        }
+    .isi.fixed.open .isi-content{
+        height:74vh;
+        }
+    .isi.fixed.open .glyphicon-triangle-top:before{
+        -webkit-transform:rotate(180deg);-moz-transform:rotate(180deg);-o-transform:rotate(180deg);transform:rotate(180deg);
+        }
+    .isi .field-label{
+        display:none;
+        }
+    .isi .isi-title{
+        height:auto;max-width:940px;margin:10px auto 10px;
+        }
+    .isi .isi-title-description{
+        font-family:arial;font-size:14px;margin-left:23px;display:block;max-height:30px;
+        }
+    .isi .isi-content{
+        max-width:925px;padding-top:5px;padding-bottom:10px;margin:-5px auto 0;height:auto;padding-right:17px;
+        }
+    .isi .isi-content a,.isi .isi-content a:link,.isi .isi-content a:hover,.isi .isi-content a:focus{
+        color:#3a6592;text-decoration:underline;
+        }
+    .isi .isi-content .isi-indication{
+        margin-right:5px;margin-left:22px;
+        }
+    .isi .isi-content .isi-indication .title-indication{
+        text-transform:uppercase;margin:15px 0 10px;font-size:14px;
+        }
+    .isi .isi-content .isi-indication .title-indication .colon{
+        display:none;
+        }
+    .isi .isi-content-description{
+        margin-right:5px;margin-left:22px;line-height:16px;
+        }
+    .isi .isi-content-description table.isi-table-outside-border {
+        margin:10px 0;display:block;border:1px solid;
+        }
+    .isi .isi-content-description table.isi-table-outside-border td{
+        padding:10px;border:none;
+        }
+    .isi .isi-content-description table.isi-table-outside-border .rtecenter {
+        margin-bottom:10px;
+        }
+    .isi #isi-content-products table{
+        margin:10px 0;display:block;
+        }
+    .isi #isi-content-products table td{
+        padding:10px;
+        }
+    .isi #isi-content-products table .rtecenter {
+        margin-bottom:10px;
+        }
+    .isi .glyphicon{
+        font-size:15px;
+        }
+    .isi .glyphicon-triangle-bottom:before,.isi .glyphicon-triangle-top:before{
+        max-height:30px;float:left;
+        }
+    .productsall-isi{
+        display:none;width:100%;position:absolute;background-color:#fff;margin-top:0px;border-top:1px solid #eee;background-color:#ffffff;-webkit-box-shadow:0px -4px 7px rgba(220,220,220,0.75);-moz-box-shadow:0px -4px 7px rgba(220,220,220,0.75);box-shadow:0px -4px 7px rgba(220,220,220,0.75);font-family:arial;
+        }
+    .productsall-isi .productsall-isi-title{
+        margin-left:23px;display:block;max-height:35px;cursor:pointer;max-width:940px;margin:0 auto;
+        }
+    .productsall-isi .productsall-isi-title .glyphicon{
+        font-size:14px;
+        }
+    .productsall-isi .productsall-isi-title .glyphicon strong{
+        font-family:arial;font-size:14px;max-height:30px;display:block;margin-left:17px;padding:0 9px 5px;
+        }
+    .productsall-isi .productsall-isi-title .glyphicon-triangle-bottom:before,.productsall-isi .productsall-isi-title .glyphicon-triangle-top:before{
+        max-height:30px;float:left;
+        }
+    .productsall-isi .productsall-isi-content{
+        font-size:12px;line-height:13px;max-width:940px;margin:0 auto;padding:0 0 0 25px;
+        }
+    .productsall-isi .productsall-isi-content .title-indication{
+        text-transform:uppercase;margin:15px 0 10px;font-size:14px;
+        }
+    .productsall-isi .productsall-isi-content .title-indication .colon{
+        display:none;
+        }
+    .isi-overlay{
+        border:10px solid #002955;height:60vh;top:-15px;
+        }
+    .isi-overlay .invisible-isi{
+        display:none;
+        }
+    .isi-overlay .indication-pi-link a{
+        text-decoration:underline;
+        }
+    @media (max-width:768px){
+        .isi-overlay{
+        position:fixed;top:45px;width:100%;
+        }
+    }
+    .isi-overlay .isi-overlay-title{
+        font-weight:bold;font-size:12px;float:left;padding:5px 10px;width:80%;text-transform:uppercase;
+        }
+    .isi-overlay .isi-overlay-description,.isi-overlay .isi-overlay-indication{
+        font-size:12px;
+        }
+    .isi-overlay .isi-overlay-description{
+        padding-top:5px;
+        }
+    .isi-overlay .title-indication{
+        margin:3px 0;text-transform:uppercase;
+        }
+    @media (max-width:767px){
+        .isi-overlay .title-indication{
+        margin:10px 0 0;
+        }
+    }
+    .isi-overlay .title-indication .colon{
+        display:none;
+        }
+    .isi-overlay .isi-overlay-content{
+        margin-right:10px;margin-left:10px;float:left;height:45vh;
+        }
+    @media only screen and (min-device-width :360px) and (max-device-width :667px) and (orientation:landscape){
+        .isi-overlay .isi-overlay-content{
+        height:41vh;
+        }
+    }
+    @media only screen and (min-width:360px) and (max-width:640px) and (orientation:portrait){
+        .isi-overlay .isi-overlay-content{
+        height:87%;
+        }
+    }
+    .isi-overlay .isi-overlay-close{
+        display:block;width:22px;height:22px;background-image:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/close-button-isi-overlay.png);background-repeat:no-repeat;float:right;padding:5px 10px;margin:5px 10px;
+        }
+    .isi-overlay .mCSB_scrollTools .mCSB_draggerContainer {
+        height:62vh;
+        }
+    .mCSB_dragger,.isi-overlay .mCSB_dragger {
+        height:50px !important;
+        }
+    @media (max-width:768px){
+        .all-page .isi-overlay{
+        top:140px;width:90%;height:75%;z-index:10000;
+        }
+    .all-page-products .isi-overlay{
+        top:90px;width:90%;height:75%;z-index:10000;
+        }
+    }
+    .all-page-products .isi-overlay{
+        top:140px;
+        }
+    @media (width:1024px){
+        .isi.fixed.open{
+        height:70vh;
+        }
+    .isi.fixed.open .isi-content{
+        height:64vh;
+        }
+    }
+    @media only screen and (min-width:360px) and (max-width:640px) and (orientation:portrait){
+        .all-page-products .isi-overlay{
+        top:90px;
+        }
+    .isi.fixed.open{
+        height:70vh;
+        }
+    .isi.fixed.open .isi-content{
+        height:64vh;
+        }
+    }
+    @media only screen and (min-device-width :360px) and (max-device-width :667px) and (orientation:landscape){
+        .all-page-products .isi-overlay{
+        top:50px;
+        }
+    .isi.fixed.open{
+        height:60vh;
+        }
+    .isi.fixed.open .isi-content{
+        height:54vh;
+        }
+    }
+    @media screen and (min-width:767px){
+        .node-type-productsall .inset-isi{
+        margin-top:20px;
+        }
+    }
+    @media (min-width:767px) and (max-width:992px){
+        .node-type-productsall .isi-content-description,.node-type-productsall .isi-indication{
+        margin-left:23px !important;
+        }
+    }
+    @media screen and (min-width:767px){
+        .isi{
+        font-size:14px;
+        }
+    .isi .isi-title-description{
+        font-size:18px;margin-left:22px;
+        }
+    .isi .isi-content .isi-indication .title-indication{
+        text-transform:uppercase;margin:15px 0 10px;font-size:18px;
+        }
+    .isi .isi-content .isi-indication .title-indication .colon{
+        display:none;
+        }
+    .ipad .isi-overlay{
+        margin-top:-40px;
+        }
+    .productsall-isi .productsall-isi-title{
+        margin-top:10px;
+        }
+    .productsall-isi .productsall-isi-title .glyphicon strong{
+        font-family:arial;font-size:18px;padding:0 10px 5px;
+        }
+    .productsall-isi .productsall-isi-content{
+        line-height:16px;padding:0 0 0 26px;height:23vh;font-size:14px;
+        }
+    .productsall-isi .productsall-isi-content .title-indication{
+        font-size:18px;
+        }
+    .isi-overlay{
+        border:10px solid #002955;height:69.5vh;margin-top:13px;padding-bottom:15px;
+        }
+    .isi-overlay .isi-overlay-title{
+        font-size:18px;padding:15px 15px 5px 30px;
+        }
+    .isi-overlay .isi-overlay-description,.isi-overlay .isi-overlay-indication{
+        font-size:15px;
+        }
+    .isi-overlay .isi-overlay-description .overlay-bold,.isi-overlay .isi-overlay-indication .overlay-bold{
+        font-weight:bold;
+        }
+    .isi-overlay .isi-overlay-content{
+        margin-right:15px;margin-left:15px;padding-left:15px;padding-right:15px;float:left;height:90%;
+        }
+    .isi-overlay .isi-overlay-content .isi-overlay-description table.isi-table-outside-border {
+        margin:10px 0;border:1px solid;
+        }
+    .isi-overlay .isi-overlay-content .isi-overlay-description table.isi-table-outside-border tbody td{
+        padding:10px;border:none;
+        }
+    .isi-overlay .isi-overlay-content .isi-overlay-description table.isi-table-outside-border tbody td .rtecenter {
+        margin-bottom:5px;
+        }
+    .isi-overlay .isi-overlay-close{
+        display:block;width:25px;height:25px;background-image:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/close-button-isi-overlay-desk.png);background-repeat:no-repeat;float:right;padding:5px 10px;margin:10px 10px;
+        }
+    }
+    @media screen and (min-width:767px) and (orientation:landscape){
+        .isi-content-description,.isi-indication{
+        margin-left:0 !important;
+        }
+    .isi .isi-content{
+        padding-left:15px;padding-right:30px;
+        }
+    }
+    @media (max-width:766px){
+        .products .carousel-inner {
+        height:auto;
+        }
+    }
+    .ipad .products-main-header .products-main-header-description{
+        width:60%;float:left;
+        }
+    .page-node-24 .field-name-field-product-image-desktop img{
+        width:118px;height:auto;
+        }
+    @media screen and (max-width:767px){
+        .products .content-full{
+        padding-bottom:0;padding-top:100px;
+        }
+    }
+    @media (max-width:768px){
+        .products .view-id-products .view-header .content-full-view{
+        -webkit-box-shadow:0px 2px 3px 0px rgba(50,50,50,0.75);-moz-box-shadow:0px 2px 3px 0px rgba(50,50,50,0.75);box-shadow:0px 2px 3px 0px rgba(50,50,50,0.75);
+        }
+    }
+    @media (max-width:768px){
+        .products .view-id-products .view-header .content-full-view .container {
+        padding-left:15px;padding-right:15px;
+        }
+    }
+    .products .view-id-products .view-header .content-full-view .container .products-main-header .products-main-header-description{
+        font-family:'dinregular';color:#000000;font-size:12px;
+        }
+    @media (max-width:768px){
+        .products .view-id-products .view-header .content-full-view .container .products-main-header .products-main-header-description{
+        line-height:13px;padding-bottom:11px;
+        }
+    }
+    .products .view-id-products .view-header .content-full-view .container .products-main-header .products-main-header-description strong{
+        color:#274b72;font-size:14px;font-family:'dinregular';
+        }
+    .products .view-id-products .view-header .content-full-view .container .products-main-header .products-main-header-image{
+        width:273px;
+        }
+    @media (max-width:768px){
+        .products .view-id-products .view-header .content-full-view .container .products-main-header .products-main-header-image{
+        float:right;right:-15px;position:relative;
+        }
+    }
+    @media (max-width:768px){
+        .products .view-id-products .view-header .content-full-view .container .products-main-header .products-main-header-image .tel-content a{
+        text-decoration:none;border-bottom:2px solid;
+        }
+    }
+    @media (max-width:768px){
+        .products .view-id-products .view-header .content-full-view .container .products-main-header .products-main-header-image .bg-tel-full{
+        display:none;
+        }
+    }
+    .products .view-id-products .view-header .content-full-view .container .products-main-header .products-main-header-image .products-main-header-image-description.telephone-background-products{
+        width:273px;font-size:14px;color:#ffffff;font-weight:bold;position:relative;z-index:499;line-height:18px;padding-top:6px;padding-right:15px;
+        }
+    @media (max-width:768px){
+        .products .view-id-products .view-header .content-full-view .container .products-main-header .products-main-header-image .products-main-header-image-description.telephone-background-products{
+        line-height:15px;padding:20px 0 20px 78px;
+        }
+    }
+    .products .view-id-products .view-header .content-full-view .container .products-main-header .products-main-header-image .products-main-header-image-description.telephone-background-products a{
+        font-size:14px;display:block;color:#ffffff;padding-top:5px;
+        }
+    @media (max-width:768px){
+        .products .view-id-products .view-header .content-full-view .container .products-main-header .products-main-header-image .products-main-header-image-description.telephone-background-products a{
+        display:inline-block;
+        }
+    }
+    .products .view-id-products .view-header ul.menu{
+        position:absolute;left:0;right:0;margin:0 auto;z-index:9;margin-top:10px;
+        }
+    @media (max-width:768px){
+        .products .view-id-products .view-header ul.menu{
+        width:initial;text-align:left;padding-left:11px;margin-top:6px;
+        }
+    }
+    .products .view-id-products .view-header ul.menu li{
+        display:inline-block;border-right:1px solid #3a6592;padding-right:5px;line-height:12px;
+        }
+    @media (max-width:768px){
+        .products .view-id-products .view-header ul.menu li.first{
+        display:inline-block;
+        }
+    }
+    .products .view-id-products .view-header ul.menu li.last{
+        border-right:0;padding-right:0;padding-left:3px;
+        }
+    .products .view-id-products .view-header ul.menu li a{
+        padding:0;font-size:12px;color:#3a6592;text-decoration:underline;
+        }
+    @media (max-width:768px){
+        .products .view-id-products .view-header ul.menu li a{
+        text-decoration:underline;font-size:10px;
+        }
+    }
+    .products .view-id-products .view-header ul.menu li a:hover {
+        background:none;text-decoration:underline;
+        }
+    .products .view-id-products .view-header ul.menu li a:focus{
+        background:none;
+        }
+    .products #carousel .productsall-slider-action-buttons{
+        position:absolute;left:0;right:0;margin:0 auto;top:121px;
+        }
+    .products #carousel .productsall-slider-action-buttons a{
+        background:none;height:23px;width:74px;text-indent:-9000px;opacity:1;left:0;
+        }
+    .products #carousel .productsall-slider-action-buttons a.left{
+        background:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/btn-carrousel-leftt.png) no-repeat;background-size:cover;top:-69px;
+        }
+    @media (max-width:768px){
+        .products #carousel .productsall-slider-action-buttons a.left{
+        z-index:99;left:11px;
+        }
+    }
+    .products #carousel .productsall-slider-action-buttons a.right{
+        background:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/btn-carrousel-right.png) no-repeat;background-size:cover;top:-69px;
+        }
+    @media (max-width:768px){
+        .products #carousel .productsall-slider-action-buttons a.right{
+        z-index:99;top:-69px;right:11px;left:initial;
+        }
+    }
+    .products #carousel .productsall-slider-action-buttons ol.carousel-indicators{
+        left:0;padding:0;margin:0;text-align:center;top:-67px;bottom:initial;width:100%;
+        }
+    @media (min-width:769px){
+        .products #carousel .productsall-slider-action-buttons ol.carousel-indicators{
+        width:initial;
+        }
+    }
+    .products #carousel .productsall-slider-action-buttons ol.carousel-indicators .active{
+        width:11px;height:11px;margin:1px;
+        }
+    @media (max-width:768px){
+        .products #carousel .productsall-slider-action-buttons ol.carousel-indicators .active{
+        margin:1px 8px 1px 1px;
+        }
+    }
+    .products #carousel .productsall-slider-action-buttons ol.carousel-indicators li{
+        margin-bottom:7px;background-color:#c0cedc;
+        }
+    @media (max-width:768px){
+        .products #carousel .productsall-slider-action-buttons ol.carousel-indicators li{
+        margin:1px 8px 1px 1px;
+        }
+    }
+    .products #carousel .productsall-slider-action-buttons ol.carousel-indicators li.active{
+        background-color:#3a6592;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top{
+        background:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/bg-produtcs-mobile.png) repeat-x center center;background-image:linear-gradient(to bottom,#f3f6f8,#bdcfe2 271px,#d7e4f2 272px,#c1d7ee);
+        }
+    @media (max-width:768px){
+        .products #carousel .carousel-inner .item .productsall-slider-top{
+        background-size:contain;padding-top:52px;padding-bottom:25px;
+        }
+    }
+    @media (max-width:768px){
+        .products #carousel .carousel-inner .item .productsall-slider-top .container .productsall-region-left{
+        display:none;
+        }
+    }
+    .products #carousel .carousel-inner .item .productsall-slider-top .container .productsall-region-center {
+        width:80px;padding-left:8px;padding-right:0px;
+        }
+    @media (max-width:768px){
+        .products #carousel .carousel-inner .item .productsall-slider-top .container .productsall-region-center {
+        float:right;
+        }
+    }
+    @media (max-width:768px){
+        .products #carousel .carousel-inner .item .productsall-slider-top .container .productsall-region-center .productsall-field_product_image_desktop{
+        display:none;
+        }
+    }
+    .products #carousel .carousel-inner .item .productsall-slider-top .container .productsall-region-right{
+        margin-top:35px;padding:0;width:initial;
+        }
+    @media (max-width:767px){
+        .products #carousel .carousel-inner .item .productsall-slider-top .container .productsall-region-right{
+        padding-right:85px;
+        }
+    }
+    @media (max-width:768px){
+        .products #carousel .carousel-inner .item .productsall-slider-top .container .productsall-region-right{
+        float:none;
+        }
+    }
+    .products #carousel .carousel-inner .item .productsall-slider-top .container .productsall-region-right .productsall-field_title{
+        font-family:'dinregular';font-size:21px;line-height:23px;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .container .productsall-region-right .productsall-field_title a{
+        color:#274b72;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .container .productsall-region-right .productsall-field_subtitle{
+        font-family:'dinregular';color:#274b72;font-size:15px;line-height:15px;letter-spacing:-0.9px;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .container .productsall-region-right .productsall-field_product_indication{
+        margin-top:10px;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .container .productsall-region-right .productsall-field_product_indication p{
+        line-height:16px;letter-spacing:-0.3px;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .container .productsall-region-right .productsall-field_product_indication p.title-indication{
+        float:left;padding-right:5px;margin:0;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .container .productsall-region-right .productsall-field_product_indication p.bold-carrousel{
+        font-weight:bold;margin-top:-6px;margin-bottom:8px;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .container .productsall-region-right .productsall-field_product_indication .indication-scroll{
+        margin-top:0;height:192px;overflow:hidden;padding-bottom:14px;display:-moz-box;display:block;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .container .productsall-region-right .productsall-field_quick_information_mobile{
+        margin-bottom:30px;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .container .productsall-region-right .productsall-field_quick_information_mobile ul{
+        padding:0;margin:0;list-style:none;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .container .productsall-region-right .productsall-field_quick_information_mobile ul li{
+        font-size:12px;line-height:14px;padding-bottom:6px;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .container .productsall-region-right .productsall-field_product_slider_button .button-blue{
+        display:inline-block;width:initial;padding:13px 15px;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .container .productsall-region-right .productsall-field_product_slider_button p:nth-child(1) .button-blue{
+        width:225px;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .container .productsall-region-right .productsall-field_product_slider_button p:nth-child(2) .button-blue{
+        width:182px;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .container .productsall-region-right .product-trademark-0 .button-white,.products #carousel .carousel-inner .item .productsall-slider-top .container .productsall-region-right .product-trademark-1 .button-white,.products #carousel .carousel-inner .item .productsall-slider-top .container .productsall-region-right .product-trademark-2 .button-white,.products #carousel .carousel-inner .item .productsall-slider-top .container .productsall-region-right .product-trademark-3 .button-white,.products #carousel .carousel-inner .item .productsall-slider-top .container .productsall-region-right .product-trademark-4 .button-white{
+        display:none;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .container .productsall-region-right .product-trademark-0 .product-footnote,.products #carousel .carousel-inner .item .productsall-slider-top .container .productsall-region-right .product-trademark-1 .product-footnote,.products #carousel .carousel-inner .item .productsall-slider-top .container .productsall-region-right .product-trademark-2 .product-footnote,.products #carousel .carousel-inner .item .productsall-slider-top .container .productsall-region-right .product-trademark-3 .product-footnote,.products #carousel .carousel-inner .item .productsall-slider-top .container .productsall-region-right .product-trademark-4 .product-footnote{
+        padding:5px 0;font-size:11px;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .container .productsall-region-right .product-trademark-0 p,.products #carousel .carousel-inner .item .productsall-slider-top .container .productsall-region-right .product-trademark-1 p,.products #carousel .carousel-inner .item .productsall-slider-top .container .productsall-region-right .product-trademark-2 p,.products #carousel .carousel-inner .item .productsall-slider-top .container .productsall-region-right .product-trademark-3 p,.products #carousel .carousel-inner .item .productsall-slider-top .container .productsall-region-right .product-trademark-4 p{
+        display:none;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .container .productsall-region-right .product-trademark-5,.products #carousel .carousel-inner .item .productsall-slider-top .container .productsall-region-right .product-trademark-6{
+        display:none;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .container .productsall-region-right .productsall-field_for_medical p{
+        line-height:15px;color:#000000;font-size:14px;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .container .productsall-region-right .productsall-field_for_medical p a{
+        color:#000000;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .container .productsall-region-right .productsall-field_for_medical p a:hover {
+        text-decoration:none;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .container .productsall-region-right .productsall-field_for_medical a.pfizermed-link{
+        color:#3a6592;text-decoration:underline;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .product-1 .productsall-region-right .productsall-field_product_indication p.indication-pi-link{
+        display:none;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .product-0 .productsall-region-right .productsall-field_product_indication p.title-indication,.products #carousel .carousel-inner .item .productsall-slider-top .product-1 .productsall-region-right .productsall-field_product_indication p.title-indication,.products #carousel .carousel-inner .item .productsall-slider-top .product-2 .productsall-region-right .productsall-field_product_indication p.title-indication,.products #carousel .carousel-inner .item .productsall-slider-top .product-3 .productsall-region-right .productsall-field_product_indication p.title-indication,.products #carousel .carousel-inner .item .productsall-slider-top .product-4 .productsall-region-right .productsall-field_product_indication p.title-indication,.products #carousel .carousel-inner .item .productsall-slider-top .product-5 .productsall-region-right .productsall-field_product_indication p.title-indication,.products #carousel .carousel-inner .item .productsall-slider-top .product-6 .productsall-region-right .productsall-field_product_indication p.title-indication{
+        margin-bottom:3px;float:none;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .product-0 .productsall-region-right .productsall-field_product_indication p.indication-pi-link,.products #carousel .carousel-inner .item .productsall-slider-top .product-1 .productsall-region-right .productsall-field_product_indication p.indication-pi-link,.products #carousel .carousel-inner .item .productsall-slider-top .product-2 .productsall-region-right .productsall-field_product_indication p.indication-pi-link,.products #carousel .carousel-inner .item .productsall-slider-top .product-3 .productsall-region-right .productsall-field_product_indication p.indication-pi-link,.products #carousel .carousel-inner .item .productsall-slider-top .product-4 .productsall-region-right .productsall-field_product_indication p.indication-pi-link,.products #carousel .carousel-inner .item .productsall-slider-top .product-5 .productsall-region-right .productsall-field_product_indication p.indication-pi-link,.products #carousel .carousel-inner .item .productsall-slider-top .product-6 .productsall-region-right .productsall-field_product_indication p.indication-pi-link{
+        display:none;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .product-3 .productsall-field_product_indication .indication-scroll{
+        padding-right:14px;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .product-3 .productsall-region-center {
+        width:80px;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .product-0 .productsall-region-right .productsall-field_quick_information_mobile{
+        margin-bottom:30px;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .product-0 .productsall-region-center img{
+        position:relative;left:14px;top:28px;
+        }
+    @media (max-width:767px){
+        .products #carousel .carousel-inner .item .productsall-slider-top .product-0 .productsall-region-center img{
+        width:47px;top:0;left:19px;margin-top:10px;
+        }
+    }
+    .products #carousel .carousel-inner .item .productsall-slider-top .product-1 .productsall-region-right .productsall-field_quick_information_mobile{
+        margin-top:0;margin-bottom:0;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .product-1 .productsall-region-center img{
+        position:relative;top:28px;
+        }
+    @media (max-width:768px){
+        .products #carousel .carousel-inner .item .productsall-slider-top .product-1 .productsall-region-center img{
+        left:-10px;
+        }
+    }
+    .products #carousel .carousel-inner .item .productsall-slider-top .product-1 .productsall-region-center .productsall-field_product_image_mobile{
+        height:310px;
+        }
+    @media (max-width:767px){
+        .products #carousel .carousel-inner .item .productsall-slider-top .product-1 .productsall-region-center img{
+        margin-top:37px;top:0;left:-3px;width:85px;max-width:initial;
+        }
+    }
+    .products #carousel .carousel-inner .item .productsall-slider-top .product-2 .productsall-region-center {
+        width:100px;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .product-2 .productsall-region-center img{
+        position:relative;top:28px;
+        }
+    @media (max-width:767px){
+        .products #carousel .carousel-inner .item .productsall-slider-top .product-2 .productsall-region-center img{
+        left:0;margin-left:41px;top:0;margin-top:35px;width:auto;height:235px;
+        }
+    }
+    @media (max-width:768px){
+        .products #carousel .carousel-inner .item .productsall-slider-top .product-2 .productsall-region-center img{
+        left:0;
+        }
+    }
+    @media (max-width:767px){
+        .products #carousel .carousel-inner .item .productsall-slider-top .product-3 .productsall-region-right{
+        width:calc(100% + 80px);
+        }
+    }
+    @media (max-width:767px){
+        .products #carousel .carousel-inner .item .productsall-slider-top .product-3 .productsall-region-center {
+        padding-right:0;
+        }
+    }
+    .products #carousel .carousel-inner .item .productsall-slider-top .product-3 .productsall-region-center img{
+        position:relative;top:28px;
+        }
+    @media (max-width:767px){
+        .products #carousel .carousel-inner .item .productsall-slider-top .product-3 .productsall-region-center img{
+        top:0;margin-top:98px;margin-left:-6px;width:85px;max-width:initial;
+        }
+    }
+    .products #carousel .carousel-inner .item .productsall-slider-top .product-4 .productsall-region-right .productsall-field_quick_information_mobile{
+        margin-top:0;margin-bottom:0;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .product-4 .productsall-region-center img{
+        position:relative;top:28px;
+        }
+    @media (max-width:768px){
+        .products #carousel .carousel-inner .item .productsall-slider-top .product-4 .productsall-region-center img{
+        left:18px;
+        }
+    }
+    .products #carousel .carousel-inner .item .productsall-slider-top .product-3 .productsall-field_quick_information_mobile{
+        margin-bottom:23px !important;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .product-3 .productsall-field_product_image_mobile{
+        padding-bottom:15px;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .product-5 .productsall-region-right .productsall-field_quick_information_mobile{
+        margin-top:-5px;margin-bottom:30px;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .product-5 .productsall-region-center img{
+        position:relative;top:28px;
+        }
+    @media (max-width:768px){
+        .products #carousel .carousel-inner .item .productsall-slider-top .product-5 .productsall-region-center img{
+        left:18px;
+        }
+    }
+    .products #carousel .carousel-inner .item .productsall-slider-top .product-6 .productsall-region-center img{
+        position:relative;top:28px;
+        }
+    @media (max-width:768px){
+        .products #carousel .carousel-inner .item .productsall-slider-top .product-6 .productsall-region-center img{
+        left:18px;
+        }
+    }
+    @media only screen and (min-device-width:768px) and (max-device-width:1024px) and (orientation:portrait){
+        .products #carousel .carousel-inner .item .productsall-slider-top{
+        background:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/bg-produtcs-mobile.png) repeat-x center -139px fixed;min-height:565px;
+        }
+    .products .view-id-products .view-header .content-full-view .container .products-main-header .products-main-header-image{
+        right:-24px;
+        }
+    }
+    @media (min-width:769px){
+        .products .content-full{
+        padding-top:130px;background:#fff;
+        }
+    .products .productsall-field_quick_information-mobile{
+        display:none;
+        }
+    .products .view-id-products .view-header .content-full-view .container .products-main-header .products-main-header-description{
+        width:667px;float:left;font-family:'dinregular';color:#000000;font-size:14px;line-height:16px;
+        }
+    .products .view-id-products .view-header .content-full-view .container .products-main-header .products-main-header-description strong{
+        color:#274b72;font-size:20px;font-family:'dinregular';
+        }
+    .products .view-id-products .view-header .content-full-view .container .products-main-header .products-main-header-image{
+        width:273px;float:left;
+        }
+    .products .view-id-products .view-header .content-full-view .container .products-main-header .products-main-header-image .bg-tel-full{
+        background:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/bg-full-phone.jpg) repeat-x;width:30%;height:75px;position:absolute;right:0;z-index:498;top:131px;
+        }
+    .products .view-id-products .view-header .content-full-view .container .products-main-header .products-main-header-image .products-main-header-image-description.telephone-background-products{
+        width:273px;font-size:18px;color:#ffffff;font-weight:bold;position:relative;z-index:499;line-height:18px;padding-top:6px;padding-right:15px;
+        }
+    .products .view-id-products .view-header .content-full-view .container .products-main-header .products-main-header-image .products-main-header-image-description.telephone-background-products a{
+        font-size:25px;display:block;color:#ffffff;padding-top:5px;text-decoration:none;cursor:text;
+        }
+    .products .view-id-products .view-header ul.menu{
+        position:absolute;left:0;right:0;margin:0 auto;text-align:right;width:580px;z-index:9;margin-top:10px;
+        }
+    .products .view-id-products .view-header ul.menu li{
+        display:inline-block;border-right:1px solid #3a6592;padding-right:5px;line-height:12px;
+        }
+    .products .view-id-products .view-header ul.menu li.first{
+        display:none;
+        }
+    .products .view-id-products .view-header ul.menu li.last{
+        border-right:0;padding-right:0;padding-left:3px;
+        }
+    .products .view-id-products .view-header ul.menu li a{
+        padding:0;font-size:12px;color:#3a6592;
+        }
+    .products .view-id-products .view-header ul.menu li a:hover {
+        background:none;text-decoration:underline;
+        }
+    .products .view-id-products .view-header ul.menu li a:focus{
+        background:none;
+        }
+    .products #carousel{
+        background:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/bg-carrousel.jpg) repeat-x;
+        }
+    .products #carousel .productsall-slider-action-buttons{
+        position:absolute;width:940px;left:0;right:0;margin:0 auto;top:211px;
+        }
+    .products #carousel .productsall-slider-action-buttons a{
+        background:none;height:30px;width:100px;text-indent:-9000px;opacity:1;left:0;
+        }
+    .products #carousel .productsall-slider-action-buttons a.left{
+        background:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/btn-carousel-left.png);top:-189px;
+        }
+    .products #carousel .productsall-slider-action-buttons a.right{
+        background:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/btn-carousel-right.png);top:-189px;left:160px;
+        }
+    .products #carousel .productsall-slider-action-buttons ol.carousel-indicators{
+        left:52px;padding:0;margin:0;text-align:left;top:95px;
+        }
+    .products #carousel .productsall-slider-action-buttons ol.carousel-indicators .active{
+        width:24px;height:24px;margin:1px;background:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/btn-carrousel-indicator.png);
+        }
+    .products #carousel .productsall-slider-action-buttons ol.carousel-indicators li{
+        margin-left:9px;margin-right:9px;background-color:#9bb1c8;
+        }
+    .products #carousel .productsall-slider-action-buttons ol.carousel-indicators li.active{
+        background-color:#3a6592;background:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/btn-carrousel-indicator.png);
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top{
+        background:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/bg-carrousel-internal.jpg) no-repeat center center;height:602px;background-size:2100px;padding-bottom:45px;background-position-y:-217px;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .container .productsall-region-left{
+        margin-left:14px;padding:0;margin-right:75px;top:108px;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .container .productsall-region-left ul{
+        width:246px;padding:0;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .container .productsall-region-left ul li{
+        list-style:none;color:#666666;font-size:14px;padding-bottom:19px;letter-spacing:-0.5px;line-height:16px;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .container .productsall-region-left ul li:last-child{
+        position:absolute;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .container .productsall-region-left ul li.safety{
+        margin-top:8px;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .container .productsall-region-left ul li.safety:before{
+        content:'';background:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/certified.png) no-repeat;display:block;list-style:none;width:52px;height:35px;float:left;margin-top:-8px;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .container .productsall-region-left ul li.medalha:before{
+        content:'';background:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/icon-key.png) no-repeat -4px -4px;display:block;list-style:none;width:52px;height:42px;float:left;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .container .productsall-region-left ul li.pincel{
+        clear:both;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .container .productsall-region-left ul li.pincel:before{
+        content:'';background:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/icon-key.png) no-repeat -278px 0;display:block;list-style:none;width:52px;height:42px;float:left;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .container .productsall-region-left ul li.medical:before{
+        content:'';background:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/icon-key.png) no-repeat -144px -81px;display:block;list-style:none;width:52px;height:42px;float:left;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .container .productsall-region-left ul li.medical-more:before{
+        content:'';background:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/icon-key.png) no-repeat -140px 0px;display:block;list-style:none;width:52px;height:42px;float:left;position:relative;top:-5px;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .container .productsall-region-left ul li.corrent:before{
+        content:'';background:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/icon-key.png) no-repeat -4px -79px;display:block;list-style:none;width:52px;height:30px;float:left;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .container .productsall-region-center {
+        width:124px;padding-left:0;padding-right:0px;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .container .productsall-region-center .productsall-field_product_image_mobile{
+        display:none;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .container .productsall-region-right{
+        margin-top:35px;padding:0;width:492px;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .container .productsall-region-right .productsall-field_title{
+        font-family:'dinregular';font-size:30px;line-height:31px;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .container .productsall-region-right .productsall-field_title a{
+        color:#274b72;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .container .productsall-region-right .productsall-field_subtitle{
+        font-family:'dinregular';color:#274b72;font-size:26px;line-height:31px;letter-spacing:-0.9px;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .container .productsall-region-right .productsall-field_product_indication{
+        margin-top:8px;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .container .productsall-region-right .productsall-field_product_indication p{
+        line-height:16px;letter-spacing:-0.3px;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .container .productsall-region-right .productsall-field_product_indication p.title-indication{
+        float:left;padding-right:5px;margin:0;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .container .productsall-region-right .productsall-field_product_indication p.bold-carrousel{
+        font-weight:bold;margin-top:-6px;margin-bottom:-8px;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .container .productsall-region-right .productsall-field_product_indication .indication-scroll{
+        height:145px;overflow:hidden;padding-bottom:14px;display:-moz-box;display:block;padding-right:15px;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .container .productsall-region-right .productsall-field_quick_information_mobile{
+        display:none;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .container .productsall-region-right .productsall-field_product_slider_button .button-blue{
+        display:inline-block;width:initial;padding:7px 15px;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .container .productsall-region-right .productsall-field_product_slider_button p:nth-child(1) .button-blue{
+        width:225px;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .container .productsall-region-right .productsall-field_product_slider_button p:nth-child(2) .button-blue{
+        width:182px;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .container .productsall-region-right .productsall-field_for_medical p{
+        line-height:15px;color:#000000;font-size:14px;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .container .productsall-region-right .productsall-field_for_medical p a{
+        color:#000000;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .container .productsall-region-right .productsall-field_for_medical p a:hover {
+        text-decoration:none;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .container .productsall-region-right .productsall-field_for_medical p a.pfizermed-link{
+        color:#3a6592;text-decoration:underline;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .product-1 .productsall-region-right .productsall-field_product_indication p.indication-pi-link{
+        display:none;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .product-0 .productsall-region-right .productsall-field_product_indication p.title-indication,.products #carousel .carousel-inner .item .productsall-slider-top .product-1 .productsall-region-right .productsall-field_product_indication p.title-indication,.products #carousel .carousel-inner .item .productsall-slider-top .product-2 .productsall-region-right .productsall-field_product_indication p.title-indication,.products #carousel .carousel-inner .item .productsall-slider-top .product-3 .productsall-region-right .productsall-field_product_indication p.title-indication,.products #carousel .carousel-inner .item .productsall-slider-top .product-4 .productsall-region-right .productsall-field_product_indication p.title-indication,.products #carousel .carousel-inner .item .productsall-slider-top .product-5 .productsall-region-right .productsall-field_product_indication p.title-indication,.products #carousel .carousel-inner .item .productsall-slider-top .product-6 .productsall-region-right .productsall-field_product_indication p.title-indication{
+        margin-bottom:3px;float:none;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .product-0 .productsall-region-right .productsall-field_product_indication p.indication-pi-link,.products #carousel .carousel-inner .item .productsall-slider-top .product-1 .productsall-region-right .productsall-field_product_indication p.indication-pi-link,.products #carousel .carousel-inner .item .productsall-slider-top .product-2 .productsall-region-right .productsall-field_product_indication p.indication-pi-link,.products #carousel .carousel-inner .item .productsall-slider-top .product-3 .productsall-region-right .productsall-field_product_indication p.indication-pi-link,.products #carousel .carousel-inner .item .productsall-slider-top .product-4 .productsall-region-right .productsall-field_product_indication p.indication-pi-link,.products #carousel .carousel-inner .item .productsall-slider-top .product-5 .productsall-region-right .productsall-field_product_indication p.indication-pi-link,.products #carousel .carousel-inner .item .productsall-slider-top .product-6 .productsall-region-right .productsall-field_product_indication p.indication-pi-link{
+        display:none;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .product-3 .productsall-field_for_medical{
+        margin-top:10px;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .product-3 .productsall-region-left{
+        margin-right:33px;width:235px;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .product-3 .productsall-region-left .productsall-field_quick_information ul{
+        width:244px;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .product-3 .productsall-region-left .productsall-field_quick_information ul li.medical:before{
+        height:72px;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .product-3 .productsall-region-center {
+        width:166px;text-align:center;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .product-0 .productsall-region-left .productsall-field_quick_information ul{
+        width:233px;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .product-0 .productsall-region-center img{
+        position:relative;left:0px;top:6px;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .product-0 .product-footnote{
+        font-size:11px;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .product-0 .productsall-region-center img{
+        width:auto;height:406px;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .product-2 .productsall-region-left ul li{
+        width:203px;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .product-2 .productsall-region-left ul li.medical:before{
+        height:63px !important;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .product-2 .productsall-region-center img{
+        width:124px;height:auto;margin-left:-20px;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .product-3 .productsall-region-center img{
+        top:150px;left:15px;width:115px;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .product-1 .productsall-region-center img{
+        width:auto;height:357px;position:relative;top:14px;left:-34px;max-width:none;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .product-2 .productsall-region-center img{
+        position:relative;width:47px;left:25px;top:50px;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .product-4 .product-footnote{
+        font-size:11px;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .product-4 .productsall-region-center img{
+        position:relative;top:28px;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .product-4 .productsall-region-right .productsall-field_product_slider_button{
+        margin:-15px 0 0 0;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .product-4 .productsall-region-center {
+        text-align:center;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .product-5 .productsall-field_for_medical{
+        margin-top:10px;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .product-5 .productsall-region-center img{
+        width:77px;height:369px;position:relative;top:28px;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .product-4 .productsall-field_for_medical{
+        margin-top:10px;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .product-4 .productsall-region-center img{
+        width:67px;height:371px;position:relative;top:28px;
+        }
+    }
+    @media (min-width:768px) and (max-width:991px){
+        .products #carousel .carousel-inner .item .productsall-slider-top .product-3 .productsall-region-center {
+        width:150px;margin-top:44px;
+        }
+    .products #carousel .carousel-inner .item .productsall-slider-top .product-3 .productsall-region-center .productsall-field_product_image_mobile img{
+        width:100%;
+        }
+    }
+    .field-items a{
+        display:inline-block;
+        }
+    .field-items u a,.field-items u strong{
+        text-decoration:underline;
+        }
+    .field-items .video-js{
+        max-width:100%;max-height:52vw;margin-bottom:20px;outline:none !important;
+        }
+    .field-items .video-js .vjs-contextmenu-ui-menu{
+        display:none !important;
+        }
+    .field-items .video-js .vjs-captions-button{
+        display:none !important;
+        }
+    @media only screen and (min-width:1921px){
+        .products #carousel .carousel-inner .item .productsall-slider-top{
+        background-size:cover;background-position:center;
+        }
+    }
+    .disclaimer {
+        border:5px solid #002955;font-size:14px;padding:5px;width:90%;
+        }
+    .disclaimer h3.title-description{
+        float:left;clear:both;color:#274b72;font-family:'dinmedium';font-size:18px;letter-spacing:-1px;margin:0 6px 5px;width:90%;
+        }
+    .disclaimer .close{
+        float:right;width:22px;height:22px;margin:5px;background-image:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/close-button-isi-overlay.png);background-repeat:no-repeat;opacity:1;
+        }
+    .disclaimer .description{
+        width:100%;font-size:14px;float:left;padding:1px;margin:0 6px 10px;
+        }
+    .disclaimer .description p{
+        margin:0;
+        }
+    .disclaimer .button-ok{
+        float:right;margin-right:30px;margin-left:16px;margin-bottom:10px;
+        }
+    .disclaimer .button-cancel{
+        font-family:'dinlight';color:#002955;float:right;font-size:18px;margin:5px 5px 10px;
+        }
+    .disclaimer .button-blue{
+        text-align:center !important;font-size:18px;text-transform:uppercase;width:57px !important;padding:5px !important;float:none !important;left:0 !important;
+        }
+    @media screen and (min-width:767px){
+        .disclaimer {
+        max-width:555px;border:10px solid #002955;padding:0;
+        }
+    .disclaimer h3.title-description{
+        font-size:22px;margin:23px 20px 10px !important;
+        }
+    .disclaimer .close{
+        background-image:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/close-button-isi-overlay-desk.png);width:25px;height:25px;margin:8px;
+        }
+    .disclaimer .description{
+        font-size:15px;margin:0 20px 40px;width:auto;
+        }
+    .disclaimer .button-ok{
+        margin-right:45px;margin-bottom:17px;
+        }
+    .disclaimer .button-cancel{
+        margin:5px 5px 17px;
+        }
+    }
+    html{
+        height:100%;
+        }
+    body{
+        font-family:arial;color:#000000;height:100%;background-color:#002955;
+        }
+    .all-page,.all-page-products{
+        min-height:100%;position:relative;top:0;
+        }
+    .content-full-footer {
+        width:100%;bottom:0;
+        }
+    @media screen and (min-width:767px){
+        .front .all-page .content-full{
+        padding-top:88px;background:#fff;
+        }
+    .not-front .all-page .content-full{
+        padding-top:130px;background:#fff;padding-bottom:20px;
+        }
+    .node-type-productsall .all-page .content-full{
+        padding-bottom:0;background:#fff;
+        }
+    }
+    @media (max-width:768px){
+        .front .all-page .content-full{
+        padding-top:68px;background:#fff;
+        }
+    .not-front .all-page .content-full{
+        padding-top:105px;padding-bottom:17px;background:#fff;
+        }
+    .node-type-productsall .all-page .content-full{
+        padding-bottom:0;overflow:hidden;
+        }
+    .modal-open{
+        position:fixed;
+        }
+    }
+    @media (min-width:767px) and (max-width:992px){
+        .front .all-page .content-full{
+        padding-top:88px;background:#fff;
+        }
+    .not-front .all-page .content-full{
+            padding-top:130px;background:#fff;
+        }
+    .node-type-productsall .all-page .content-full{
+            padding-bottom:0;margin-bottom:0;
+        }
+    .page-node-28 .all-page-products .content-full{
+            padding-bottom:0;padding-bottom:140px;background:#fff;
+        }
+    }
+    @media only screen and (min-device-width:320px) and (max-device-width:568px) and (-webkit-min-device-pixel-ratio:2) and (orientation:portrait){
+        .front .all-page .content-full{
+            padding-top:68px;background:#fff;
+        }
+    }
+    @media only screen and (min-device-width :360px) and (max-device-width :667px) and (orientation:landscape){
+        .front .all-page .content-full{
+            padding-top:68px;padding-bottom:108px;
+        }
+    }
+    i.together {
+            white-space:nowrap;font-style:normal;
+        }
+    .telephone{
+            background-image:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/produtcts-telephone.png);background-repeat:no-repeat;padding:0 40px 10px 78px;width:366px;color:#ffffff;font-size:26px;
+        }
+    .button-white{
+            background-color:#ffffff;color:#000000;position:relative;text-decoration:none;cursor:pointer;width:100%;padding:10px 10px 10px 30px;-webkit-box-shadow:5px 5px 0px -2px rgba(204,204,204,0.93);-moz-box-shadow:5px 5px 0px -2px rgba(204,204,204,0.93);box-shadow:5px 5px 0px -2px rgba(204,204,204,0.93);
+        }
+    .button-white:hover {
+            color:#000000;text-decoration:none;cursor:pointer;
+        }
+    .button-white:before{
+            content:"";left:0;top:0;position:absolute;text-align:center;display:block;width:17px;height:90%;border-top-style:inset;border-top-width:1px;border-top-color:white;border-left-color:white;border-left-width:1px;border-left-style:inset;margin:1px;z-index:1;
+        }
+    .button-white:after {
+            background-color:#3a6592;background-position:center;background-repeat:no-repeat;background-image:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/arrow-button-white.png);content:"";left:0;top:0;position:absolute;text-align:center;display:block;width:20px;height:100%;
+        }
+    .button-white:hover:after {
+            background:#1b3869;
+        }
+    .button-blue{
+            background-color:#002955;color:#ffffff;position:relative;text-decoration:none;width:100%;padding:5px;cursor:pointer;font-family:'dinlight';display:inherit;
+        }
+    .button-blue:hover,.button-blue:focus{
+            color:#ffffff;text-decoration:none;cursor:pointer;
+        }
+    .button-blue:after {
+            background-color:#3a6592;content:"";background-image:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/arrow-button-blue.png);background-position:0;background-repeat:no-repeat;right:-20px;top:0;position:absolute;text-align:center;display:block;width:20px;height:100%;
+        }
+    .links-blue-x{
+            color:#3a6592;text-decoration:underline;
+        }
+    .links-blue-x:hover {
+            color:#3a6592;
+        }
+    .links-dark-x{
+            color:#000;text-decoration:underline;
+        }
+    .links-dark-x:hover {
+            color:#000;
+        }
+    .isi{
+            border-top:1px solid #eee;
+        }
+    .nicescroll-rails{
+            background:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/bg-scrollbar-line.png) repeat-y 4px 0;background-size:2px;
+        }
+    .gecko .nicescroll-rails{
+            background:url(/sites/default/themes/bootstrap_drupal_pfizer_meridian/images/bg-scrollbar-line.png) repeat-y 2px 0;background-size:2px;
+        }
+    </style>
+</html>
