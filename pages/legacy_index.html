@@ -1,0 +1,149 @@
+<!-- hi there, html reader, say hi if you see this -->
+<!DOCTYPE html>
+
+<html lang = "en-GB">
+<link rel = "shortcut icon" href = "/pages/assets/icon.jpg"/>
+<title>Index</title>
+
+<html>
+    <head>
+        <!-- font/definition-->
+        <meta charset="UTF-8">
+        <meta name="description" content="A portfolio ">
+        <meta name = "keywords" content="portfolio">
+        <meta name = "author" content="Stephen">
+        <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            h2, h3, article, img {
+                font-family: 'Times New Roman', Times, serif;
+                margin-left: 100px;
+                margin-right: 100px;
+                font-size: 100%;
+                text-align: center;
+                padding-bottom: 5px;
+                padding-top: 5px;
+                background-color: grey;
+            }
+            p, ol, ul, li {
+                font-family: 'Times New Roman', Times, serif;
+                margin-left: 100px;
+                margin-right: 100px;
+                font-size: 100%;
+                text-align: left;
+                background-color: grey;
+            }
+            sub {
+                font-family: 'Times New Roman', Times, serif;
+                margin-left: 100px;
+                margin-right: 100px;
+                font-size: 100%;
+                text-align: left;
+            }
+            .navbar {
+                overflow: hidden;
+                background-color: #333;
+            }
+            .navbar a {
+                float: left;
+                font-size: 16px;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+            .dropdown {
+                float: left;
+                overflow: hidden;
+            }
+            .dropdown .dropbtn {
+                font-size: 16px;  
+                border: none;
+                outline: none;
+                color: white;
+                padding: 14px 16px;
+                background-color: inherit;
+                font-family: inherit;
+                margin: 0;
+            }
+            .navbar a:hover, .dropdown:hover .dropbtn {
+                background-color: grey;
+            }
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: whitesmoke;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+            }
+            .dropdown-content a {
+                display: block;
+                float: none;
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                text-align: left;
+            }
+            .dropdown-content a:hover {
+                background-color: grey;
+            }
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+        </style>
+        <!-- end font/definition-->
+    </head>
+    <body>
+    <!-- topbar-->
+    <div class="navbar">
+        <a href="/">Home</a>
+        <a href="/">Another Page</a>
+        <div class="dropdown">
+          <button class="dropbtn">Internal Directory 
+            <i class="dropper"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href = "pages/online-presences">Contact Information</a>
+            <a href = "pages/privacy">Privacy Policies</a>
+            <a href = "pages/go-away">Something?</a>
+            <a href = "404">404 page...really?</a>
+          </div>
+        </div> 
+      </div>
+    <!--end topbar-->
+        <section class  = "container">
+            <!-- about me-->
+            <article class = pinfo>
+                <h2>About Me</h2>
+                <p>
+                    My name's Stephen, I'm a developer teaching myself from code snippets I find or other open sourced projects.<br>
+                    I always appreciate constructive criticism. When I finish a project, it'll be here. Cheers.<br>
+                    Currently you'll find me looking around on GitHub or messing about with HTML or JavaScript. Since I'm <i>very</i> new to this, you will almost certainly find one or more of the following:   
+                    <li>
+                        broken, unmaintainable, inefficient, or disgusting code OR
+                    </li>
+                    <li>
+                        <i>very, and i mean VERY</i> stupid errors (most likely)
+                    </li>
+                    <br>
+                    That's all for now.  I'll update this...sometime.
+                </p>
+                <sub>
+                    Modified: <i>17:33 PDT, 25th May 2020</i>
+                </sub>
+            </article>
+            <!-- end about me-->
+        </section>
+    </body>
+</html>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src = "https://www.googletagmanager.com/gtag/js?id=UA-167546856-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-167546856-1');
+</script>
+<!-- End global site tag (gtag.js) - Google Analytics -->
