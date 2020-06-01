@@ -3,12 +3,17 @@
 
 <html lang = "en-GB">
 <link rel = "shortcut icon" href = "/pages/assets/icon.jpg"/>
-<title>Parallax</title>
+<title>Home</title>
 
 
 <html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- font/definition-->
+    <meta charset="UTF-8">
+    <meta name="description" content="Home for my personal testing website. Feel free to look around or say hi, some pages contain content from other websites which I'm teaching myself from.">
+    <meta name = "keywords" content="home">
+    <meta name = "author" content="Stephen">
+    <meta name = "viewport" content="width=device-width, initial-scale=1.0">
         <style>
             body, html {
                 height: 100%;
@@ -25,15 +30,15 @@
                 background-size: cover;
             }
             .first-last-img {
-                background-image: url("assets/background.jpg");
+                background-image: url("pages/assets/background.jpg");
                 min-height: 100%;
             }
             .second-img {
-                background-image: url("assets/icon.jpg");
+                background-image: url("pages/assets/icon.jpg");
                 min-height: 400px;
             }
             .third-img {
-                background-image: url("assets/road.jpg");
+                background-image: url("pages/assets/road.jpg");
                 min-height: 400px;
             }
             .caption {
@@ -56,36 +61,6 @@
                 text-transform: uppercase;
                 font: 20px "Lato", sans-serif;
                 color: #111;
-            }
-            @media only screen and (max-device-width: 1024px) {
-                .first-last-img, .second-img, .third-img {
-                    background-attachment: scroll;
-                }
-            }
-            h2, h3, article, img {
-                font-family: 'Times New Roman', Times, serif;
-                margin-left: 100px;
-                margin-right: 100px;
-                font-size: 100%;
-                text-align: center;
-                padding-bottom: 5px;
-                padding-top: 5px;
-                background-color: grey;
-            }
-            p, ol, ul, li {
-                font-family: 'Times New Roman', Times, serif;
-                margin-left: 100px;
-                margin-right: 100px;
-                font-size: 100%;
-                text-align: left;
-                background-color: grey;
-            }
-            sub {
-                font-family: 'Times New Roman', Times, serif;
-                margin-left: 100px;
-                margin-right: 100px;
-                font-size: 100%;
-                text-align: left;
             }
             .navbar {
                 overflow: hidden;
@@ -138,8 +113,13 @@
             .dropdown:hover .dropdown-content {
                 display: block;
             }
+            @media only screen and (max-device-width: 1024px) {
+                .first-last-img, .second-img, .third-img {
+                    background-attachment: scroll;
+                }
+            }
         </style>
-            <!-- end font/definition-->
+    <!-- end font/definition-->
     </head>
     <body>
     <!-- topbar-->
