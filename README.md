@@ -10,4 +10,6 @@ Repository containing personal portfolio.<br/>
         text here
     </p>
     ```
-- The website uses Google Analytics, ID: `UA-167546856-1`
+- The website uses Google Analytics, 
+    *Old ID: `UA-167546856-1`*
+    *New ID: `UA-180753023-1`*
